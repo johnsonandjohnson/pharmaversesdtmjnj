@@ -1,0 +1,32 @@
+Package: pharmaversesdtmjnj
+Title: J&J Innovative Medicine SDTM Test Data
+Version: 0.0.1
+Authors@R: 
+    c(
+    person(given = "David", 
+            family = "Munoz Tord",
+            role = c("aut", "cre"),
+            email = "dtord@its.jnj.com"),
+    person(given = "Nicholas",
+           family = "Masel",
+           role = c("aut"),
+           email = "nmasel@its.jnj.com"),
+      person(given = "Joe",
+           family = "Kovach",
+           role = "aut",
+           email = "jkovach2@its.jnj.com"),
+     person(given = "J&J Innovative Medicine",
+           role = c("cph", "fnd"))
+    )
+Description: A set of Study Data Tabulation Model (SDTM) datasets constructed by 
+  modifying the `pharmaversesdtm` package to meet J&J Innovative Medicine's 
+  standard data structure for Clinical and Statistical Programming.
+Depends:
+    R (>= 3.5.0),
+    pharmaversesdtm (>= 1.2.0)
+License: Apache License (>= 2.0)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+LazyData: true
+Language: en-US

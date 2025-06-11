@@ -1,0 +1,45 @@
+#' @title mh
+#'
+#' @description mh modified from pharmaversesdtm
+#' @source data from pharmaversesdtm.
+#'
+#' @format A data frame with 1818 rows and 29 variables:
+#' \describe{
+#'  \item{STUDYID}{Study Identifier}
+#'  \item{DOMAIN}{Domain Abbreviation}
+#'  \item{USUBJID}{Unique Subject Identifier}
+#'  \item{MHSEQ}{Sequence Number}
+#'  \item{MHSPID}{Sponsor-Defined Identifier}
+#'  \item{MHTERM}{Reported Term for the Medical History}
+#'  \item{MHLLT}{Lowest Level Term}
+#'  \item{MHDECOD}{Dictionary-Derived Term}
+#'  \item{MHHLT}{High Level Term}
+#'  \item{MHHLGT}{High Level Group Term}
+#'  \item{MHCAT}{Category for Medical History}
+#'  \item{MHBODSYS}{Body System or Organ Class}
+#'  \item{MHSEV}{Severity/Intensity}
+#'  \item{VISITNUM}{Visit Number}
+#'  \item{VISIT}{Visit Name}
+#'  \item{VISITDY}{Planned Study Day of Visit}
+#'  \item{MHDTC}{Date/Time of History Collection}
+#'  \item{MHSTDTC}{Start Date/Time of Medical History Event}
+#'  \item{MHDY}{Study Day of History Collection}
+#'  \item{MHENDTC}{End Date/Time of Medical History Event}
+#'  \item{MHPRESP}{Medical History Event Pre-Specified}
+#'  \item{MHOCCUR}{Medical History Occurrence}
+#'  \item{MHSTRTPT}{Start Relative to Reference Time Point}
+#'  \item{MHENRTPT}{End Relative to Reference Time Point}
+#'  \item{MHSTTPT}{Start Reference Time Point}
+#'  \item{MHENTPT}{End Reference Time Point}
+#'  \item{MHENRF}{End Relative to Reference Period}
+#'  \item{MHSTAT}{Completion Status}
+#'  \item{MHTOXGR}{Standard Toxicity Grade}
+#' }
+#' @seealso \code{\link{ds}} \code{\link{mh}}
+#' @keywords datasets mh
+#' @name mh
+#' @examples
+#' \dontrun{
+#'  data("mh")
+#' }
+"mh"
