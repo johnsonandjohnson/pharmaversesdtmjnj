@@ -1,0 +1,15 @@
+url: https://johnsonandjohnson.github.io/pharmaversesdtmjnj/
+repo:
+  url:
+    home: https://github.com/johnsonandjohnson/pharmaversesdtmjnj
+    source: https://github.com/johnsonandjohnson/pharmaversesdtmjnj/blob/main/
+    issue: https://github.com/johnsonandjohnson/pharmaversesdtmjnj/issues/
+    user: https://github.com/
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    primary: '#0054AD'
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+

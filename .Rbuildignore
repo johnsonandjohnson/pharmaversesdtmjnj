@@ -3,3 +3,8 @@ LICENSE\.md$
 data-raw$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^CRAN-SUBMISSION$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
