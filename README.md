@@ -1,6 +1,21 @@
 # pharmaversesdtmjnj
+<!-- start badges -->
+[![Check 🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml)
+[![Docs 📚](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/pkgdown.yaml/badge.svg)](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/)
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+![GitHub forks](https://img.shields.io/github/forks/johnsonandjohnson/pharmaversesdtmjnj?style=social)
+![GitHub repo stars](https://img.shields.io/github/stars/johnsonandjohnson/pharmaversesdtmjnj?style=social)
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/johnsonandjohnson/pharmaversesdtmjnj)
+![GitHub contributors](https://img.shields.io/github/contributors/johnsonandjohnson/pharmaversesdtmjnj)
+![GitHub last commit](https://img.shields.io/github/last-commit/johnsonandjohnson/pharmaversesdtmjnj)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/johnsonandjohnson/pharmaversesdtmjnj)
+![GitHub repo size](https://img.shields.io/github/repo-size/johnsonandjohnson/pharmaversesdtmjnj)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Current Version](https://img.shields.io/github/r-package/v/johnsonandjohnson/pharmaversesdtmjnj/main?color=purple&label=package%20version)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/tree/main)
+[![Open Issues](https://img.shields.io/github/issues-raw/johnsonandjohnson/pharmaversesdtmjnj?color=red&label=open%20issues)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+<!-- end badges -->
+
 
 Generate SDTM datasets aligned with Johnson & Johnson's Clinical and Statistical Programming standards.
 

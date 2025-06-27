@@ -6,3 +6,6 @@ data-raw$
 ^docs$
 ^\.lintr$
 ^\.idea
+^\.github$
+^_pkgdown\.yml$
+^pkgdown$
