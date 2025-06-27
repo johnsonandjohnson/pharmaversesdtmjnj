@@ -1,11 +1,12 @@
-cran-comments\.md$
 LICENSE\.md$
-data-raw$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^docs$
-^\.lintr$
-^\.idea
 ^\.github$
+^\.idea
+^\.lintr$
+^\.pre-commit-config\.yaml$
 ^_pkgdown\.yml$
+^docs$
 ^pkgdown$
+cran-comments\.md$
+data-raw$
