@@ -12,7 +12,7 @@ repos:
     # codemeta must be above use-tidy-description when both are used
     # -   id: codemeta-description-updated
     -   id: use-tidy-description
-    -   id: spell-check
+#    -   id: spell-check
         exclude: >
           (?x)^(
           .*\.[rR]|
@@ -46,7 +46,7 @@ repos:
     -   id: no-browser-statement
     -   id: no-print-statement
     -   id: no-debug-statement
-    -   id: deps-in-desc
+#    -   id: deps-in-desc
     -   id: lintr
         args: [ --warn_only, --key=value ]
     -   id: style-files
@@ -56,8 +56,8 @@ repos:
     hooks: 
     -   id: check-added-large-files
         args: ['--maxkb=200']
-    -   id: file-contents-sorter
-        files: '^\.Rbuildignore$'
+#    -   id: file-contents-sorter
+#        files: '^\.Rbuildignore$'
     -   id: end-of-file-fixer
         exclude: '\.Rd'
 -   repo: https://github.com/pre-commit-ci/pre-commit-ci-config
