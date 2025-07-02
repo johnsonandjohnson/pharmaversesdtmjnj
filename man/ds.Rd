@@ -33,9 +33,7 @@ ds
 ds modified from pharmaversesdtm
 }
 \examples{
-\dontrun{
- data("ds")
-}
+data("ds")
 }
 \seealso{
 \code{\link{ds}} \code{\link{mh}}

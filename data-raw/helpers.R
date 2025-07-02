@@ -19,12 +19,11 @@
 #' @importFrom formatters var_labels
 #' @noRd
 restore_labels <- function(
-  df,
-  orig_df,
-  additional_labels = list(),
-  source_dfs = NULL,
-  verbose = TRUE
-) {
+    df,
+    orig_df,
+    additional_labels = list(),
+    source_dfs = NULL,
+    verbose = TRUE) {
   env_verbose <- as.logical(Sys.getenv("GEN_VERBOSE", unset = TRUE))
   # Use function parameter if explicitly provided, otherwise use environment variable
   verbose <- if (missing(verbose)) env_verbose else verbose
@@ -262,9 +261,7 @@ roxygen2_data <- function(df_name) {
   examp <-
     c(
       "#' @examples",
-      "#' \\dontrun{",
       paste0("#'  data(\"", df_name, "\")"),
-      "#' }",
       paste0("\"", df_name, "\"")
     )
 

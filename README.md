@@ -23,7 +23,7 @@ Generate SDTM datasets aligned with Johnson & Johnson's Clinical and Statistical
 ## Features
 
 - Generates SDTM datasets that comply with J&J standards
-- Built on top of the `pharmaversesdtm` package
+- Built on top of the 'pharmaversesdtm' package
 - Implements data conversion from pharmaverse format to J&J standards format
 - Provides reproducible and consistent test data
 

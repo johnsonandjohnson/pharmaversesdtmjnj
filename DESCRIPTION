@@ -19,7 +19,7 @@ Authors@R:
            role = c("cph", "fnd"))
     )
 Description: A set of Study Data Tabulation Model (SDTM) datasets constructed by 
-  modifying the `pharmaversesdtm` package to meet J&J Innovative Medicine's 
+  modifying the 'pharmaversesdtm' package to meet J&J Innovative Medicine's
   standard data structure for Clinical and Statistical Programming.
 Depends:
     R (>= 3.5.0),

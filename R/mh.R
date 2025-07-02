@@ -39,7 +39,5 @@
 #' @keywords datasets mh
 #' @name mh
 #' @examples
-#' \dontrun{
-#'  data("mh")
-#' }
+#' data("mh")
 "mh"

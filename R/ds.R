@@ -24,7 +24,5 @@
 #' @keywords datasets ds
 #' @name ds
 #' @examples
-#' \dontrun{
-#'  data("ds")
-#' }
+#' data("ds")
 "ds"

@@ -48,9 +48,7 @@ mh
 mh modified from pharmaversesdtm
 }
 \examples{
-\dontrun{
- data("mh")
-}
+data("mh")
 }
 \seealso{
 \code{\link{ds}} \code{\link{mh}}
