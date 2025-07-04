@@ -11,7 +11,7 @@ source("data-raw/helpers.R")
 
 # Generate MH dataset
 gen_mh <- function() {
-  #Get source data
+  # Get source data
   raw <- pharmaversesdtm::mh
 
   gen <- dplyr::mutate(
