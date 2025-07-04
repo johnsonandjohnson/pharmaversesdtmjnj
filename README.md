@@ -1,6 +1,6 @@
 # pharmaversesdtmjnj
 <!-- start badges -->
-[![Check 🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml)
+[![Check 🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml)
 [![Docs 📚](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/pkgdown.yaml/badge.svg)](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/)
 
 ![GitHub forks](https://img.shields.io/github/forks/johnsonandjohnson/pharmaversesdtmjnj?style=social)
