@@ -77,7 +77,7 @@ jobs:
   linter:
     if: github.event_name != 'push'
     name: Linter 🦸‍♀️
-    uses: johnsonandjohnson/pharmaversesdtmjnj/blob/main/.github/workflows/lint.yaml@main
+    uses: johnsonandjohnson/pharmaversesdtmjnj/.github/workflows/lint.yaml@main
   roxygen:
     name: Roxygen 🅾
     uses: insightsengineering/r.pkg.template/.github/workflows/roxygen.yaml@main
