@@ -1,33 +1,101 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+---
+name: Linter 🦸‍♀️
+
 on:
   push:
-    branches: [main, master]
+    branches:
+      - main
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      lintr_error_on_lint:
+        description: Produce an error when lints are found
+        required: false
+        type: boolean
+        default: true
+      lint-all-files:
+        description: Lint all files every time
+        default: false
+        required: false
+        type: boolean
 
-name: lint.yaml
-
-permissions: read-all
+concurrency:
+  group: lint-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  lint:
+  lint-r-code:
+    name: Lint R code 🧶
     runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    if: >
+      !contains(github.event.commits[0].message, '[skip linter]')
+        && github.event.pull_request.draft == false
+    container:
+      image: ghcr.io/insightsengineering/rstudio:latest
+
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: r-lib/actions/setup-r@v2
+      - name: Checkout repo (PR) 🛎
+        uses: actions/checkout@v4.1.1
+        if: github.event_name == 'pull_request'
         with:
-          use-public-rspm: true
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
 
-      - uses: r-lib/actions/setup-r-dependencies@v2
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v4.1.1
+        if: github.event_name != 'pull_request'
         with:
-          extra-packages: any::lintr, local::.
-          needs: lint
+          fetch-depth: 0
 
-      - name: Lint
-        run: lintr::lint_package()
-        shell: Rscript {0}
+      - name: Check commit message 💬
+        run: |
+          git config --global --add safe.directory $(pwd)
+          export head_commit_message="$(git show -s --format=%B | tr '\r\n' ' ' | tr '\n' ' ')"
+          echo "head_commit_message = $head_commit_message"
+          if [[ $head_commit_message == *"$SKIP_INSTRUCTION"* ]]; then
+            echo "Skip instruction detected - cancelling the workflow."
+            exit 1
+          fi
+        shell: bash
         env:
-          LINTR_ERROR_ON_LINT: true
+          SKIP_INSTRUCTION: "[skip linter]"
+
+      - name: Changed files 🖋️
+        if: github.event_name != 'workflow_dispatch'
+        id: files
+        uses: Ana06/get-changed-files@v2.2.0
+        with:
+          format: 'json'
+          filter: '*'
+
+      - name: Lint 🧶
+        run: |
+          github_event_name <- "${{ github.event_name }}"
+          cat(paste0("GitHub event name = ", github_event_name, "\n"))
+          exclusions_list <- NULL
+          if (!(identical("${{ inputs.lint-all-files }}", "true") || identical(github_event_name, "workflow_dispatch"))) {
+            changed_files <- jsonlite::fromJSON('${{ steps.files.outputs.added_modified }}')
+            all_files <- list.files(recursive = TRUE)
+            exclusions_list <- as.list(setdiff(all_files, changed_files))
+            cat("Linting only changed files:\n")
+            cat(changed_files)
+            cat("\n\n")
+          } else {
+            cat("Linting all files.\n")
+          }
+          lints <- lintr::lint_package(exclusions = exclusions_list)
+          if (length(lints) > 0L) {
+            print(lints)
+            if (identical("${{ inputs.lintr_error_on_lint }}", "true")) {
+              stop("Lints detected. Please review and adjust code according to the comments provided.", call. = FALSE)
+            }
+          }
+        shell: Rscript {0}
