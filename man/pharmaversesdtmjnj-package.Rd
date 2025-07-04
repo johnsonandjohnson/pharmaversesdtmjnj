@@ -6,10 +6,10 @@
 \alias{pharmaversesdtmjnj-package}
 \title{pharmaversesdtmjnj: J&J Innovative Medicine SDTM Test Data}
 \description{
-A set of Study Data Tabulation Model (SDTM) datasets constructed by modifying the `pharmaversesdtm` package to meet J&J Innovative Medicine's standard data structure for Clinical and Statistical Programming.
+A set of Study Data Tabulation Model (SDTM) datasets constructed by modifying the 'pharmaversesdtm' package to meet J&J Innovative Medicine's standard data structure for Clinical and Statistical Programming.
 }
 \author{
-\strong{Maintainer}: David Munoz Tord \email{dtord@its.jnj.com}
+\strong{Maintainer}: David Munoz Tord \email{david.munoztord@mailbox.org}
 
 Authors:
 \itemize{

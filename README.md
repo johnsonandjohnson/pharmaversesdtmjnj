@@ -1,6 +1,6 @@
 # pharmaversesdtmjnj
 <!-- start badges -->
-[![Check 🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/R-CMD-check.yaml)
+[![Check 🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml)
 [![Docs 📚](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/pkgdown.yaml/badge.svg)](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/)
 
 ![GitHub forks](https://img.shields.io/github/forks/johnsonandjohnson/pharmaversesdtmjnj?style=social)
@@ -23,7 +23,7 @@ Generate SDTM datasets aligned with Johnson & Johnson's Clinical and Statistical
 ## Features
 
 - Generates SDTM datasets that comply with J&J standards
-- Built on top of the `pharmaversesdtm` package
+- Built on top of the 'pharmaversesdtm' package
 - Implements data conversion from pharmaverse format to J&J standards format
 - Provides reproducible and consistent test data
 
