@@ -24,5 +24,6 @@
 #' @keywords datasets ds
 #' @name ds
 #' @examples
-#' data("ds")
+#'  head(data("ds"))
 "ds"
+
