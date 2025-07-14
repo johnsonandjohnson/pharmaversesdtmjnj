@@ -39,8 +39,9 @@ Currently supports the following SDTM domains:
 You can install the development version from GitHub:
 
 ```r
-# install.packages("devtools")
-devtools::install_github("johnsonandjohnson/pharmaversesdtmjnj")
+install.packages("pharmaversesdtmjnj") #CRAN Release
+#install.packages("devtools") #or for the rolling release
+#devtools::install_github("johnsonandjohnson/pharmaversesdtmjnj")
 ```
 
 ## Usage
