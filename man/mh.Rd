@@ -48,7 +48,7 @@ mh
 mh modified from pharmaversesdtm
 }
 \examples{
-data("mh")
+ head(data("mh"))
 }
 \seealso{
 \code{\link{ds}} \code{\link{mh}}

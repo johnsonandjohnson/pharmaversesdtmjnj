@@ -33,7 +33,7 @@ ds
 ds modified from pharmaversesdtm
 }
 \examples{
-data("ds")
+ head(data("ds"))
 }
 \seealso{
 \code{\link{ds}} \code{\link{mh}}
