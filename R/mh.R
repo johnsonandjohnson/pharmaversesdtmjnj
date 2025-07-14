@@ -39,6 +39,5 @@
 #' @keywords datasets mh
 #' @name mh
 #' @examples
-#'  head(data("mh"))
+#' head(data("mh"))
 "mh"
-
