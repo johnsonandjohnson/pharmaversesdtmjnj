@@ -29,7 +29,6 @@ Generate SDTM datasets aligned with Johnson & Johnson's Clinical and Statistical
 
 ## Implemented Datasets
 
-Currently supports the following SDTM domains:
 - MH (Medical History)
 - DS (Disposition)
 
