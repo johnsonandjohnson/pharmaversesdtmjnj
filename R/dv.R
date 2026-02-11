@@ -3,7 +3,7 @@
 #' @description dv modified from pharmaversesdtm
 #' @source data from pharmaversesdtm.
 #'
-#' @format A data frame with 81 rows and 17 variables:
+#' @format A data frame with 75 rows and 17 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{USUBJID}{Unique Subject Identifier}
@@ -23,7 +23,7 @@
 #'  \item{TRTSDT}{Date of First Exposure to Treatment}
 #'  \item{DVSTDTC}{Date of First Exposure to Treatment}
 #' }
-#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{mh}}
+#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{ie}} \code{\link{mh}}
 #' @keywords datasets dv
 #' @name dv
 #' @examples

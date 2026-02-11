@@ -35,7 +35,7 @@
 #'  \item{MHSTAT}{Completion Status}
 #'  \item{MHTOXGR}{Standard Toxicity Grade}
 #' }
-#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{mh}}
+#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{ie}} \code{\link{mh}}
 #' @keywords datasets mh
 #' @name mh
 #' @examples

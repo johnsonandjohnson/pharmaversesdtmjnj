@@ -15,8 +15,8 @@ gen_dv <- function() {
   set.seed(123)
 
   # Get source data
-  raw <- dplyr::filter(
-    dplyr::select(
+  raw <- filter(
+    select(
       pharmaverseadamjnj::adsl,
       STUDYID, USUBJID, TRTSDT, TRTSDTM, TRTEDTM
     ),
@@ -26,9 +26,12 @@ gen_dv <- function() {
   gen <- df_na(raw)
 
   attr(gen, "study_duration_secs") <- 365 * 2
-  gen <- random.cdisc.data::raddv(gen, seed = 2)
+  gen <- random.cdisc.data::raddv(gen, seed = 123)
 
   gen$DVSTDTC <- gen$TRTSDT + sample.int(7, nrow(gen), replace = TRUE)
+  gen$DVDECOD <- forcats::fct_relabel(gen$DVDECOD, junco::string_to_title)
+  levels(gen$DVDECOD) <- c(levels(gen$DVDECOD), "Received Wrong Treatment or Incorrect Dose")
+  gen$DVDECOD[gen$DVTERM == "Received incorrect study medication"] <- "Received Wrong Treatment or Incorrect Dose"
 
   # Restore labels
   gen <- restore_labels(

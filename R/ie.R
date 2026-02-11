@@ -1,0 +1,19 @@
+#' @title ie
+#'
+#' @description ie modified from pharmaversesdtm
+#' @source data from pharmaversesdtm.
+#'
+#' @format A data frame with 75 rows and 4 variables:
+#' \describe{
+#'  \item{STUDYID}{Study Identifier}
+#'  \item{USUBJID}{Unique Subject Identifier}
+#'  \item{IECAT}{IE Category}
+#'  \item{IETEST}{IE Criterion Test Name}
+#' }
+#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{ie}} \code{\link{mh}}
+#' @keywords datasets ie
+#' @name ie
+#' @examples
+#'  head(data("ie"))
+"ie"
+

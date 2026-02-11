@@ -20,7 +20,7 @@
 #'  \item{DSSTDY}{Study Day of Start of Disposition Event}
 #'  \item{DSSCAT}{Subcategory for Disposition Event}
 #' }
-#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{mh}}
+#' @seealso \code{\link{ds}} \code{\link{dv}} \code{\link{ie}} \code{\link{mh}}
 #' @keywords datasets ds
 #' @name ds
 #' @examples
