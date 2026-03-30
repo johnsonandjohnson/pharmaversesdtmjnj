@@ -12,8 +12,8 @@
 #'  \item{DOMAIN}{Domain Abbreviation}
 #'  \item{DVSEQ}{Sequence Number}
 #'  \item{DVTERM}{Protocol Deviation Term}
-#'  \item{DVDECOD}{Protocol Deviation Coded Term}
-#'  \item{DVCAT}{Category for Protocol Deviation}
+#'  \item{DVDECOD}{DVDECOD}
+#'  \item{DVCAT}{DVCAT}
 #'  \item{DVSCAT}{Subcategory for Protocol Deviation}
 #'  \item{DVREAS}{Reason for Deviation}
 #'  \item{DVEPRELI}{Epi/Pandemic Related Indicator}

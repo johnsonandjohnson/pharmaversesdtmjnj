@@ -11,8 +11,8 @@ source("data-raw/helpers.R")
 
 
 # Generate DV dataset
-gen_dv <- function() {
-  set.seed(123)
+gen_dv <- function(seed = 123) {
+  set.seed(seed)
 
   # Get source data
   raw <- filter(
@@ -29,9 +29,21 @@ gen_dv <- function() {
   gen <- random.cdisc.data::raddv(gen, seed = 123)
 
   gen$DVSTDTC <- gen$TRTSDT + sample.int(7, nrow(gen), replace = TRUE)
-  gen$DVDECOD <- forcats::fct_relabel(gen$DVDECOD, junco::string_to_title)
-  levels(gen$DVDECOD) <- c(levels(gen$DVDECOD), "Received Wrong Treatment or Incorrect Dose")
-  gen$DVDECOD[gen$DVTERM == "Received incorrect study medication"] <- "Received Wrong Treatment or Incorrect Dose"
+
+  mock_categories <- c(
+    "Developed withdrawal criteria but not withdrawn",
+    "Entered but did not satisfy criteria",
+    "Received a disallowed concomitant treatment",
+    "Received wrong treatment or incorrect dose",
+    "Other"
+  )
+
+  gen$DVDECOD <- factor(
+    sample(mock_categories, nrow(gen), replace = TRUE),
+    levels = mock_categories
+  )
+
+  gen$DVCAT <- factor("MAJOR")
 
   # Restore labels
   gen <- restore_labels(

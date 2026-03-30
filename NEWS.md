@@ -3,4 +3,5 @@
 ### Added
 * Added SDTM datasets that comply with J&J standards:
   * DV (Deviation)
+  * IE (Inclusion/Exclusion)
 

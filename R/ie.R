@@ -3,7 +3,7 @@
 #' @description ie modified from pharmaversesdtm
 #' @source data from pharmaversesdtm.
 #'
-#' @format A data frame with 75 rows and 4 variables:
+#' @format A data frame with 60 rows and 4 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{USUBJID}{Unique Subject Identifier}
