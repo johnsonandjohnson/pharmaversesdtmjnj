@@ -31,6 +31,8 @@ Generate SDTM datasets aligned with Johnson & Johnson's Clinical and Statistical
 
 - MH (Medical History)
 - DS (Disposition)
+- DV (Devitation)
+- IE (Inclusion/Exclusion)
 
 
 ## Installation

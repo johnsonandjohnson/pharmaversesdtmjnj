@@ -16,6 +16,7 @@ gen_mh <- function() {
 
   gen <- dplyr::mutate(
     raw,
+    MHOCCUR = "Y",
     MHTOXGR = factor(
       sample(
         c(1:5, NA),
