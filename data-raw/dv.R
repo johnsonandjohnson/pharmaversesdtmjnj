@@ -18,9 +18,14 @@ gen_dv <- function(seed = 123) {
   raw <- filter(
     select(
       pharmaverseadamjnj::adsl,
-      STUDYID, USUBJID, TRTSDT, TRTSDTM, TRTEDTM
+      STUDYID,
+      USUBJID,
+      TRTSDT,
+      TRTSDTM,
+      TRTEDTM
     ),
-    !is.na(TRTSDTM), !is.na(TRTEDTM)
+    !is.na(TRTSDTM),
+    !is.na(TRTEDTM)
   )
 
   gen <- df_na(raw)

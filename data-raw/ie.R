@@ -59,7 +59,6 @@ gen_ie <- function(seed = 123) {
     additional_labels = additional_labels
   )
 
-
   return(gen)
 }
 

@@ -26,4 +26,3 @@
 #' @examples
 #'  head(data("ds"))
 "ds"
-

@@ -16,4 +16,3 @@
 #' @examples
 #'  head(data("ie"))
 "ie"
-
