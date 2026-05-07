@@ -24,20 +24,17 @@ gen_suppho <- function() {
       HOPRACTO = AEACN,
       .keep = "none"
     ) |>
-
     tidyr::pivot_longer(
       cols = c(HOINDC, HOINDCO, HOFREQ, HOPRACT, HOPRACTO),
       names_to = "QNAM",
       values_to = "QVAL"
     ) |>
-
     dplyr::mutate(
       RDOMAIN = "HO",
       IDVAR = "HOSEQ",
       IDVARVAL = as.character(HOSEQ),
       QLABEL = QNAM
     ) |>
-
     dplyr::select(
       STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL
     )
