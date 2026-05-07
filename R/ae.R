@@ -47,5 +47,5 @@
 #' @keywords datasets ae
 #' @name ae
 #' @examples
-#'  head(data("ae"))
+#' head(data("ae"))
 "ae"
