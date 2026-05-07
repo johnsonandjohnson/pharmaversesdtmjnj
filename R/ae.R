@@ -49,4 +49,3 @@
 #' @examples
 #'  head(data("ae"))
 "ae"
-#' End of ae documentation

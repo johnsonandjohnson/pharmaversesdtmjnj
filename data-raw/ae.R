@@ -20,7 +20,6 @@ gen_ae <- function() {
       pharmaversesdtm::dm[, c("USUBJID", "RFSTDTC", "RFENDTC")],
       by = "USUBJID"
     ) |>
-
     dplyr::mutate(
       AEENRTPT = dplyr::case_when(
         AEENDTC < RFSTDTC ~ "PRE-TREATMENT",
@@ -28,7 +27,6 @@ gen_ae <- function() {
         AEENDTC > RFENDTC ~ "POST-TREATMENT",
         .default = NA_character_
       ),
-
       RFSTDTC = NULL,
       RFENDTC = NULL
     )

@@ -15,7 +15,6 @@ source("data-raw/helpers.R")
 gen_ho <- function() {
   dm <- pharmaversesdtm::dm |>
     dplyr::select(STUDYID, USUBJID, RFSTDTC) |>
-
     dplyr::mutate(
       RFSTDTC = dplyr::if_else(
         grepl("^\\d{4}-\\d{2}-\\d{2}$", RFSTDTC),
@@ -23,14 +22,12 @@ gen_ho <- function() {
         NA_character_
       )
     ) |>
-
     dplyr::distinct()
 
   ae <- pharmaversesdtm::ae |>
     dplyr::mutate(
       dplyr::across(
         c(AESTDTC, AEDTC, AEENDTC),
-
         \(date) {
           dplyr::if_else(
             grepl("^\\d{4}-\\d{2}-\\d{2}$", date),

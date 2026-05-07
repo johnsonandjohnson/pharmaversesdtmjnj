@@ -32,14 +32,12 @@ gen_mh <- function() {
       pharmaversesdtm::dm[, c("USUBJID", "RFSTDTC")],
       by = "USUBJID"
     ) |>
-
     dplyr::mutate(
       MHSTDY = as.integer(difftime(
         dplyr::if_else(grepl("^\\d{4}-\\d{2}-\\d{2}$", MHSTDTC), MHSTDTC, NA),
         RFSTDTC,
         units = "days"
       )),
-
       MHENDY = as.integer(substr(MHENDTC, 1, 4)),
       RFSTDTC = NULL
     )
