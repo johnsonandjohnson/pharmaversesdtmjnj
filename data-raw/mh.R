@@ -26,11 +26,29 @@ gen_mh <- function() {
       )
     )
   )
+
+  gen <- gen |>
+    dplyr::left_join(
+      pharmaversesdtm::dm[, c("USUBJID", "RFSTDTC")],
+      by = "USUBJID"
+    ) |>
+    dplyr::mutate(
+      MHSTDY = as.integer(difftime(
+        dplyr::if_else(grepl("^\\d{4}-\\d{2}-\\d{2}$", MHSTDTC), MHSTDTC, NA),
+        RFSTDTC,
+        units = "days"
+      )),
+      MHENDY = as.integer(substr(MHENDTC, 1, 4)),
+      RFSTDTC = NULL
+    )
+
   gen <- df_na(gen)
 
   # Add labels
   additional_labels <- list(
-    MHTOXGR = "Standard Toxicity Grade"
+    MHTOXGR = "Standard Toxicity Grade",
+    MHSTDY = "Study Day of Start of Medical History",
+    MHENDY = "Study Day of End of Medical History"
   )
 
   # Restore labels
