@@ -18,10 +18,10 @@
 #'  \item{HODUR}{Duration of Healthcare Encounter}
 #'  \item{HOOCCUR}{Healthcare Encounter Occurrence}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
+#' @seealso \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 #' @keywords datasets ho
 #' @name ho
 #' @examples
 #'  head(data("ho"))
 "ho"
-

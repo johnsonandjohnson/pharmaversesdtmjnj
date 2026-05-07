@@ -12,10 +12,10 @@
 #'  \item{TSPARM}{Trial Summary Parameter}
 #'  \item{TSVAL}{Parameter Value}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
+#' @seealso \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 #' @keywords datasets ts
 #' @name ts
 #' @examples
 #'  head(data("ts"))
 "ts"
-

@@ -23,10 +23,10 @@
 #'  \item{TRTSDT}{Date of First Exposure to Treatment}
 #'  \item{DVSTDTC}{Date of First Exposure to Treatment}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
+#' @seealso \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 #' @keywords datasets dv
 #' @name dv
 #' @examples
 #'  head(data("dv"))
 "dv"
-
