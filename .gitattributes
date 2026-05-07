@@ -1,0 +1,4 @@
+*.xpt
+ filter=lfs diff=lfs merge=lfs -text
+*.xpt filter=lfs diff=lfs merge=lfs -text
+NEWS.md merge=union

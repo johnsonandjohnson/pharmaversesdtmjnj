@@ -5,7 +5,7 @@
 \alias{mh}
 \title{mh}
 \format{
-A data frame with 1818 rows and 29 variables:
+A data frame with 1818 rows and 31 variables:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -36,6 +36,8 @@ A data frame with 1818 rows and 29 variables:
 \item{MHENRF}{End Relative to Reference Period}
 \item{MHSTAT}{Completion Status}
 \item{MHTOXGR}{Standard Toxicity Grade}
+\item{MHSTDY}{Study Day of Start of Medical History}
+\item{MHENDY}{Study Day of End of Medical History}
 }
 }
 \source{
@@ -51,7 +53,7 @@ mh modified from pharmaversesdtm
  head(data("mh"))
 }
 \seealso{
-\code{\link{ds}} \code{\link{mh}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{datasets}
 \keyword{mh}

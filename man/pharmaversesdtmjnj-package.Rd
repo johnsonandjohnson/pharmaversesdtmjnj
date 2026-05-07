@@ -19,6 +19,7 @@ Authors:
 
 Other contributors:
 \itemize{
+  \item Renfei Mao \email{rmao6@its.jnj.com} [contributor]
   \item J&J Innovative Medicine [copyright holder, funder]
 }
 
