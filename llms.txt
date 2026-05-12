@@ -1,0 +1,98 @@
+# pharmaversesdtmjnj
+
+[![Check
+🛠](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml/badge.svg)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/check.yaml)
+[![Docs
+📚](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/actions/workflows/pkgdown.yaml/badge.svg)](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/)
+
+![GitHub
+forks](https://img.shields.io/github/forks/johnsonandjohnson/pharmaversesdtmjnj?style=social)![GitHub
+repo
+stars](https://img.shields.io/github/stars/johnsonandjohnson/pharmaversesdtmjnj?style=social)
+
+![GitHub commit
+activity](https://img.shields.io/github/commit-activity/m/johnsonandjohnson/pharmaversesdtmjnj)![GitHub
+contributors](https://img.shields.io/github/contributors/johnsonandjohnson/pharmaversesdtmjnj)![GitHub
+last
+commit](https://img.shields.io/github/last-commit/johnsonandjohnson/pharmaversesdtmjnj)![GitHub
+pull
+requests](https://img.shields.io/github/issues-pr/johnsonandjohnson/pharmaversesdtmjnj)![GitHub
+repo
+size](https://img.shields.io/github/repo-size/johnsonandjohnson/pharmaversesdtmjnj)[![Project
+Status: Active – The project has reached a stable, usable state and is
+being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Current
+Version](https://img.shields.io/github/r-package/v/johnsonandjohnson/pharmaversesdtmjnj/main?color=purple&label=package%20version)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/tree/main)
+[![Open
+Issues](https://img.shields.io/github/issues-raw/johnsonandjohnson/pharmaversesdtmjnj?color=red&label=open%20issues)](https://github.com/johnsonandjohnson/pharmaversesdtmjnj/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+
+Generate SDTM datasets aligned with Johnson & Johnson’s Clinical and
+Statistical Programming standards.
+
+## Features
+
+- Generates SDTM datasets that comply with J&J standards
+- Built on top of the ‘pharmaversesdtm’ package
+- Implements data conversion from pharmaverse format to J&J standards
+  format
+- Provides reproducible and consistent test data
+
+## Implemented Datasets
+
+- MH (Medical History)
+- DS (Disposition)
+- DV (Devitation)
+- IE (Inclusion/Exclusion)
+
+## Installation
+
+You can install the development version from GitHub:
+
+``` r
+
+install.packages("pharmaversesdtmjnj") #CRAN Release
+#install.packages("devtools") #or for the rolling release
+#devtools::install_github("johnsonandjohnson/pharmaversesdtmjnj")
+```
+
+## Usage
+
+``` r
+
+library(pharmaversesdtmjnj)
+
+# Access the SDTM datasets directly
+# These datasets are loaded lazily when the package is loaded
+head(ds)
+head(mh)
+```
+
+## Data Sources
+
+Test datasets have been sourced from the
+[pharmaversesdtm](https://github.com/pharmaverse/pharmaversesdtm)
+package, which utilized the data from the [CDISC pilot
+project](https://github.com/cdisc-org/sdtm-adam-pilot-project).
+
+# Package index
+
+## All functions
+
+- [`ae`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ae.md)
+  : ae
+- [`ds`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ds.md)
+  : ds
+- [`dv`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/dv.md)
+  : dv
+- [`ho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ho.md)
+  : ho
+- [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
+  : ie
+- [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
+  : mh
+- [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)
+  : suppho
+- [`ts`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ts.md)
+  : ts
+
