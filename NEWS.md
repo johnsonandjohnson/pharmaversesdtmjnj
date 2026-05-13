@@ -17,7 +17,7 @@
 ### Added
 * Added SDTM datasets that comply with J&J standards:
   * DV (Protocol Deviations)
-  * IE (Inclusion/Exclusion)
+  * IE (Inclusion/Exclusion Criteria Not Met)
 
 ### Changed
 
