@@ -7,7 +7,7 @@
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{USUBJID}{Unique Subject Identifier}
-#'  \item{IECAT}{IE Category}
+#'  \item{IECAT}{Inclusion/Exclusion Category}
 #'  \item{IETEST}{IE Criterion Test Name}
 #' }
 #' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
