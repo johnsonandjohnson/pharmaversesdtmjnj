@@ -55,12 +55,10 @@ ae
 ae modified from pharmaversesdtm
 }
 \examples{
-head(data("ae"))
+ head(data("ae"))
 }
 \seealso{
-\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
-
-\code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{ae}
 \keyword{datasets}

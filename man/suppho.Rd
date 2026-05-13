@@ -17,22 +17,17 @@ A data frame with 5955 rows and 8 variables:
 \item{QVAL}{Qualifier Value}
 }
 }
-\source{
-data from pharmaversesdtm.
-}
 \usage{
 suppho
 }
 \description{
-suppho modified from pharmaversesdtm
+suppho created from scratch
 }
 \examples{
-head(data("suppho"))
+ head(data("suppho"))
 }
 \seealso{
-\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
-
-\code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{datasets}
 \keyword{suppho}

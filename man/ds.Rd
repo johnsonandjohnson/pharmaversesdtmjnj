@@ -33,12 +33,10 @@ ds
 ds modified from pharmaversesdtm
 }
 \examples{
-head(data("ds"))
+ head(data("ds"))
 }
 \seealso{
-\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
-
-\code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{datasets}
 \keyword{ds}

@@ -5,43 +5,30 @@
 \alias{dv}
 \title{dv}
 \format{
-A data frame with 75 rows and 17 variables:
+A data frame with 75 rows and 9 variables:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{USUBJID}{Unique Subject Identifier}
-\item{TRTSDTM}{Datetime of First Exposure to Treatment}
-\item{TRTEDTM}{Datetime of Last Exposure to Treatment}
 \item{DOMAIN}{Domain Abbreviation}
 \item{DVSEQ}{Sequence Number}
 \item{DVTERM}{Protocol Deviation Term}
 \item{DVDECOD}{DVDECOD}
 \item{DVCAT}{DVCAT}
 \item{DVSCAT}{Subcategory for Protocol Deviation}
-\item{DVREAS}{Reason for Deviation}
-\item{DVEPRELI}{Epi/Pandemic Related Indicator}
-\item{ASTDT}{Analysis Start Date}
-\item{ASTDY}{Analysis Start Relative Day}
-\item{AEPRELFL}{Analysis Epi/Pandemic Related Flag}
-\item{TRTSDT}{Date of First Exposure to Treatment}
 \item{DVSTDTC}{Date of First Exposure to Treatment}
 }
-}
-\source{
-data from pharmaversesdtm.
 }
 \usage{
 dv
 }
 \description{
-dv modified from pharmaversesdtm
+dv created from scratch
 }
 \examples{
-head(data("dv"))
+ head(data("dv"))
 }
 \seealso{
-\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
-
-\code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{datasets}
 \keyword{dv}
