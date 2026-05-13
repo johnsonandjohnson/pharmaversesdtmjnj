@@ -6,7 +6,7 @@
   * TS (Trial Design)
   * AE (Adverse Events)
   * HO (Healthcare Encounters)
-  * SUPPHO (supplemental qualifiers for Healthcare Encounters)
+  * SUPPHO (Supplemental Qualifiers for HO)
 
 * Added variables to MH:
   * MHSTDY
