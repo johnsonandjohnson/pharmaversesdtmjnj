@@ -10,7 +10,7 @@
 #'  \item{DVSEQ}{Sequence Number}
 #'  \item{DVTERM}{Protocol Deviation Term}
 #'  \item{DVDECOD}{DVDECOD}
-#'  \item{DVCAT}{DVCAT}
+#'  \item{DVCAT}{Protocol Deviation Category}
 #'  \item{DVSCAT}{Subcategory for Protocol Deviation}
 #'  \item{DVSTDTC}{Date of First Exposure to Treatment}
 #' }

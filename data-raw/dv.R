@@ -53,10 +53,15 @@ gen_dv <- function(seed = 123) {
   gen <- gen |>
     select(!any_of(c("TRTSDT", "TRTSDTM", "TRTEDTM", "DVREAS", "DVEPRELI", "ASTDT", "ASTDY", "AEPRELFL")))
 
+  additional_labels <- list(
+    DVCAT = "Protocol Deviation Category"
+  )
+
   # Restore labels
   gen <- restore_labels(
     df = gen,
-    orig_df = raw
+    orig_df = raw,
+    additional_labels = additional_labels
   )
 
   attr(gen, "label") <- "Protocol Deviations"
