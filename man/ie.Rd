@@ -9,8 +9,8 @@ A data frame with 60 rows and 4 variables:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{USUBJID}{Unique Subject Identifier}
-\item{IECAT}{IE Category}
-\item{IETEST}{IE Criterion Test Name}
+\item{IECAT}{Inclusion/Exclusion Category}
+\item{IETEST}{Inclusion/Exclusion Criterion}
 }
 }
 \source{

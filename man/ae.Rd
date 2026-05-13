@@ -55,7 +55,7 @@ ae
 ae modified from pharmaversesdtm
 }
 \examples{
- head(data("ae"))
+head(data("ae"))
 }
 \seealso{
 \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
