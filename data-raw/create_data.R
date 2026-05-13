@@ -8,6 +8,9 @@ library(dplyr)
 # Source utility functions
 source(file.path("data-raw", "helpers.R"))
 
+# Datasets created from scratch
+dfs <- c("suppho", "dv")
+
 # Get all dataset scripts (exclude helpers.R and this file)
 data_scripts <- list.files(
   path = "data-raw",
@@ -62,7 +65,7 @@ run_script <- function(script_path) {
         # Dataset is already in global environment from above
         tryCatch(
           {
-            roxygen2_data(dataset_name)
+            roxygen2_data(dataset_name, created_from_scratch = dfs)
             message(paste0("Successfully documented ", dataset_name))
             cat("---------------------------------\n")
           },
@@ -127,5 +130,5 @@ walk(data_rda, run_xpt)
 
 message("All datasets have been transformed.")
 
-system("air format .")
+styler::style_dir("data-raw")
 message("All datasets have been formated.")

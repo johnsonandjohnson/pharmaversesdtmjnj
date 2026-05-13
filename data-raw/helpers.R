@@ -19,12 +19,11 @@
 #' @importFrom formatters var_labels
 #' @noRd
 restore_labels <- function(
-  df,
-  orig_df,
-  additional_labels = list(),
-  source_dfs = NULL,
-  verbose = TRUE
-) {
+    df,
+    orig_df,
+    additional_labels = list(),
+    source_dfs = NULL,
+    verbose = TRUE) {
   env_verbose <- as.logical(Sys.getenv("GEN_VERBOSE", unset = TRUE))
   # Use function parameter if explicitly provided, otherwise use environment variable
   verbose <- if (missing(verbose)) env_verbose else verbose
@@ -205,15 +204,31 @@ df_na <- function(df, char_as_factor = TRUE, verbose = TRUE) {
 #' @param df_name Name of the dataset to document
 #' @return Nothing, writes documentation file to R/ directory
 #' @noRd
-roxygen2_data <- function(df_name) {
+roxygen2_data <- function(df_name, created_from_scratch = NULL) {
   # Get the dataset from the parent environment
   df <- get(df_name, envir = parent.frame())
 
   title <- paste0("#' @title ", df_name)
 
-  descr <- paste0("#' @description ", df_name, " modified from pharmaversesdtm")
-  src <-
-    "#' @source data from pharmaversesdtm."
+  # Determine whether this dataset is created from scratch
+  # Priority: explicit function arg > object named `dfs` in parent frame > default (FALSE)
+  from_scratch <- FALSE
+  if (!is.null(created_from_scratch)) {
+    from_scratch <- isTRUE(df_name %in% created_from_scratch)
+  } else if (exists("dfs", envir = parent.frame(), inherits = FALSE)) {
+    maybe_vec <- try(get("dfs", envir = parent.frame()), silent = TRUE)
+    if (!inherits(maybe_vec, "try-error") && is.vector(maybe_vec)) {
+      from_scratch <- isTRUE(df_name %in% maybe_vec)
+    }
+  }
+
+  if (isTRUE(from_scratch)) {
+    descr <- paste0("#' @description ", df_name, " created from scratch")
+    src <- NULL # No @source line for created-from-scratch datasets
+  } else {
+    descr <- paste0("#' @description ", df_name, " modified from pharmaversesdtm")
+    src <- "#' @source data from pharmaversesdtm."
+  }
 
   fmt <-
     paste0(
@@ -266,21 +281,10 @@ roxygen2_data <- function(df_name) {
       paste0("\"", df_name, "\"")
     )
 
-  description <-
-    c(
-      title,
-      "#'",
-      descr,
-      src,
-      "#'",
-      fmt,
-      item,
-      seealso,
-      key,
-      atname,
-      examp,
-      ""
-    )
+  # Build the description, conditionally including @source
+  description <- c(title, "#'", descr)
+  if (!is.null(src)) description <- c(description, src)
+  description <- c(description, "#'", fmt, item, seealso, key, atname, examp, "")
 
   writeLines(description, file.path("R", paste0(df_name, ".R")))
 }

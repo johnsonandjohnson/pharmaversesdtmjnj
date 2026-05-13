@@ -17,7 +17,7 @@ gen_dv <- function(seed = 123) {
   # Get source data
   raw <- filter(
     select(
-      pharmaverseadamjnj::adsl,
+      pharmaverseadam::adsl,
       STUDYID,
       USUBJID,
       TRTSDT,
@@ -50,11 +50,16 @@ gen_dv <- function(seed = 123) {
 
   gen$DVCAT <- factor("MAJOR")
 
+  gen <- gen |>
+    select(!any_of(c("TRTSDT", "TRTSDTM", "TRTEDTM", "DVREAS", "DVEPRELI", "ASTDT", "ASTDY", "AEPRELFL")))
+
   # Restore labels
   gen <- restore_labels(
     df = gen,
     orig_df = raw
   )
+
+  attr(gen, "label") <- "Protocol Deviations"
 
   return(gen)
 }
