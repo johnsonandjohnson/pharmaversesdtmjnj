@@ -1,6 +1,6 @@
 #' Generates SDTM DV test data based on random.cdisc.data::raddv
 #'
-#' This script generates the DV (Deviations) dataset and saves it to the data folder
+#' This script generates the DV (Protocol Deviations) dataset and saves it to the data folder
 
 # Load required libraries
 library(dplyr)
