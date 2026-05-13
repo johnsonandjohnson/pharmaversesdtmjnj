@@ -11,7 +11,9 @@ library(tidyr)
 source("data-raw/helpers.R")
 
 # Generate SUPPHO dataset
-gen_suppho <- function() {
+gen_suppho <- function(seed = 123) {
+  set.seed(seed)
+
   gen <- pharmaversesdtm::ae |>
     dplyr::mutate(
       STUDYID,
@@ -19,7 +21,11 @@ gen_suppho <- function() {
       HOSEQ = AESEQ,
       HOINDC = AEREL,
       HOINDCO = AEREL,
-      HOFREQ = NA_character_,
+      HOFREQ = sample(
+        c("ONCE", "REPEATED", "INTERMITTENT"),
+        dplyr::n(),
+        replace = TRUE
+      ),
       HOPRACT = AEACN,
       HOPRACTO = AEACN,
       .keep = "none"
