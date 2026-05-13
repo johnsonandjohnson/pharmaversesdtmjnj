@@ -8,7 +8,7 @@
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{USUBJID}{Unique Subject Identifier}
 #'  \item{IECAT}{Inclusion/Exclusion Category}
-#'  \item{IETEST}{IE Criterion Test Name}
+#'  \item{IETEST}{Inclusion/Exclusion Criterion}
 #' }
 #' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}}
 #' @seealso \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
