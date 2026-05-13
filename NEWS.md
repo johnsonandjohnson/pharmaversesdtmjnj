@@ -3,7 +3,7 @@
 ### Added
 
 * Added SDTM datasets that comply with J&J standards:
-  * TS (Trial Design)
+  * TS (Trial Summary Information)
   * AE (Adverse Events)
   * HO (Healthcare Encounters)
   * SUPPHO (Supplemental Qualifiers for HO)
