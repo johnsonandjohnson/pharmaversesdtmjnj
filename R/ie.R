@@ -20,6 +20,5 @@
 #' @keywords datasets ie
 #' @name ie
 #' @examples
-#'  head(data("ie"))
+#' head(data("ie"))
 "ie"
-
