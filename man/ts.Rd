@@ -25,7 +25,7 @@ ts
 ts modified from pharmaversesdtm
 }
 \examples{
- head(data("ts"))
+head(data("ts"))
 }
 \seealso{
 \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
