@@ -9,7 +9,7 @@ library(dplyr)
 source(file.path("data-raw", "helpers.R"))
 
 # Datasets created from scratch
-dfs <- c("suppho", "dv")
+dfs <- c("suppho", "dv", "ho")
 
 # Get all dataset scripts (exclude helpers.R and this file)
 data_scripts <- list.files(
