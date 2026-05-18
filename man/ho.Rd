@@ -21,14 +21,11 @@ A data frame with 1191 rows and 12 variables:
 \item{HOOCCUR}{Healthcare Encounter Occurrence}
 }
 }
-\source{
-data from pharmaversesdtm.
-}
 \usage{
 ho
 }
 \description{
-ho modified from pharmaversesdtm
+ho created from scratch
 }
 \examples{
 head(data("ho"))
