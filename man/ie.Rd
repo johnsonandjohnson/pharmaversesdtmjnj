@@ -17,7 +17,7 @@ A data frame with 60 rows and 12 variables:
 \item{IETEST}{Inclusion/Exclusion Criterion Test Name}
 \item{IETESTCD}{Inclusion/Exclusion Criterion Short Name}
 \item{IEORRES}{Result or Finding in Original Units}
-\item{IESTRESC}{Character Result Standard Format}
+\item{IESTRESC}{Character Result/Finding in Standard Format}
 \item{IEDTC}{Date/Time of Collection}
 }
 }
@@ -31,7 +31,7 @@ ie
 ie modified from pharmaversesdtm
 }
 \examples{
- head(data("ie"))
+head(data("ie"))
 }
 \seealso{
 \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
