@@ -36,18 +36,20 @@ gen_ie <- function(seed = 123) {
   # Assign IECAT (INCLUSION/EXCLUSION)
   gen$IECAT <- sample(c("INCLUSION", "EXCLUSION"), n_records, replace = TRUE)
 
-  # Assign IETEST
-  ie_levels <- c(
-    "Disease criteria",
-    "Medication criteria",
-    "Laboratory criteria",
-    "Medical history criteria",
-    "Other"
-  )
-  gen$IETEST <- sample(ie_levels, n_records, replace = TRUE)
+  # Assign IETEST and IETESTCD based on IECAT
+  inc_levels <- c("Disease criteria", "Medication criteria", "Laboratory criteria")
+  exc_levels <- c("Medical history criteria", "Other")
+  inc_codes  <- c("INC01", "INC02", "INC03")
+  exc_codes  <- c("EXC01", "EXC02")
 
-  # Derive IETESTCD from IETEST
-  ie_codes <- c("DISEASE", "MED", "LAB", "MH", "OTHER")
+  ie_levels <- c(inc_levels, exc_levels)
+  ie_codes  <- c(inc_codes,  exc_codes)
+
+  gen$IETEST <- ifelse(
+    gen$IECAT == "INCLUSION",
+    sample(inc_levels, n_records, replace = TRUE),
+    sample(exc_levels, n_records, replace = TRUE)
+  )
   gen$IETESTCD <- ie_codes[match(gen$IETEST, ie_levels)]
 
   # Assign IEORRES/IESTRESC
@@ -66,8 +68,8 @@ gen_ie <- function(seed = 123) {
     )
 
 
-  gen$IECAT <- factor(gen$IECAT, levels = c("EXCLUSION", "INCLUSION"))
-  gen$IETEST <- factor(gen$IETEST, levels = ie_levels)
+  gen$IECAT    <- factor(gen$IECAT,    levels = c("EXCLUSION", "INCLUSION"))
+  gen$IETEST   <- factor(gen$IETEST,   levels = ie_levels)
   gen$IETESTCD <- factor(gen$IETESTCD, levels = ie_codes)
   gen$VISIT <- factor(gen$VISIT, levels = visit_names)
 
