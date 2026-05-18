@@ -52,7 +52,7 @@ gen_ho <- function() {
       HOENRTPT = AEOUT,
       HOENRF = AEREL,
       HODUR = as.integer(difftime(HOENDTC, HOSTDTC, units = "days")) + 1L,
-      HOOCCUR = dplyr::if_else(is.na(HOENDTC), "Y", "N"),
+      HOOCCUR = dplyr::if_else(!is.na(HOSTDTC), "Y", "N"),
       .keep = "none"
     )
 
