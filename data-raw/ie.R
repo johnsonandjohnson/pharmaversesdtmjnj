@@ -27,11 +27,9 @@ gen_ie <- function(seed = 123) {
   )
 
   # Assign VISIT/VISITNUM
-  visit_names <- c("SCREENING", "BASELINE", "WEEK 4", "WEEK 8")
-  visit_nums <- c(1, 2, 3, 4)
-  visit_idx <- sample(seq_along(visit_names), n_records, replace = TRUE)
-  gen$VISITNUM <- visit_nums[visit_idx]
-  gen$VISIT <- visit_names[visit_idx]
+  visit_names <- c("SCREENING")
+  gen$VISITNUM <- 1
+  gen$VISIT <- "SCREENING"
 
   # Assign IECAT (INCLUSION/EXCLUSION)
   gen$IECAT <- sample(c("INCLUSION", "EXCLUSION"), n_records, replace = TRUE)
