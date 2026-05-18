@@ -17,5 +17,5 @@
 #' @keywords datasets suppho
 #' @name suppho
 #' @examples
-#'  head(data("suppho"))
+#' head(data("suppho"))
 "suppho"
