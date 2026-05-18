@@ -14,6 +14,14 @@ source("data-raw/helpers.R")
 gen_suppho <- function(seed = 123) {
   set.seed(seed)
 
+  qnam_labels <- c(
+    HOINDC = "Indication for Healthcare Encounter",
+    HOINDCO = "Indication for Healthcare Encounter (Original)",
+    HOFREQ = "Frequency of Healthcare Encounter",
+    HOPRACT = "Healthcare Practice",
+    HOPRACTO = "Healthcare Practice (Original)"
+  )
+
   gen <- pharmaversesdtm::ae |>
     dplyr::mutate(
       STUDYID,
@@ -36,10 +44,10 @@ gen_suppho <- function(seed = 123) {
       values_to = "QVAL"
     ) |>
     dplyr::mutate(
-      RDOMAIN = "HO",
-      IDVAR = "HOSEQ",
+      RDOMAIN  = "HO",
+      IDVAR    = "HOSEQ",
       IDVARVAL = as.character(HOSEQ),
-      QLABEL = QNAM
+      QLABEL   = qnam_labels[QNAM]
     ) |>
     dplyr::select(
       STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL

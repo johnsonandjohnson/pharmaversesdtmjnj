@@ -13,7 +13,6 @@ A set of Study Data Tabulation Model (SDTM) datasets constructed by modifying th
 
 Authors:
 \itemize{
-  \item David Munoz Tord \email{david.munoztord@mailbox.org}
   \item Nicholas Masel \email{nmasel@its.jnj.com}
   \item Joe Kovach \email{jkovach2@its.jnj.com}
 }

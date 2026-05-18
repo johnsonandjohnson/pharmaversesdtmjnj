@@ -1,4 +1,4 @@
-#' Generates SDTM DV test data based on random.cdisc.data::raddv
+#' Generates SDTM DV test data based on pharmaversesdtm::dm
 #'
 #' This script generates the DV (Protocol Deviations) dataset and saves it to the data folder
 
@@ -14,28 +14,36 @@ source("data-raw/helpers.R")
 gen_dv <- function(seed = 123) {
   set.seed(seed)
 
-  # Get source data
-  raw <- filter(
-    select(
-      pharmaverseadam::adsl,
-      STUDYID,
-      USUBJID,
-      TRTSDT,
-      TRTSDTM,
-      TRTEDTM
-    ),
-    !is.na(TRTSDTM),
-    !is.na(TRTEDTM)
-  )
+  # Get subjects with a full treatment period from DM
+  raw <- pharmaversesdtm::dm |>
+    dplyr::select(STUDYID, USUBJID, RFSTDTC, RFENDTC) |>
+    dplyr::filter(
+      grepl("^\\d{4}-\\d{2}-\\d{2}$", RFSTDTC),
+      grepl("^\\d{4}-\\d{2}-\\d{2}$", RFENDTC)
+    )
 
-  gen <- df_na(raw)
+  n_records <- 75
 
-  attr(gen, "study_duration_secs") <- 365 * 2
-  gen <- random.cdisc.data::raddv(gen, seed = 123)
+  gen <- tibble(
+    STUDYID = raw$STUDYID[1],
+    USUBJID = sample(raw$USUBJID, n_records, replace = TRUE)
+  ) |>
+    dplyr::left_join(raw[, c("USUBJID", "RFSTDTC", "RFENDTC")], by = "USUBJID") |>
+    dplyr::mutate(
+      DOMAIN = "DV",
+      DVSTDTC = format(
+        as.Date(RFSTDTC) + floor(
+          runif(dplyr::n()) * as.integer(as.Date(RFENDTC) - as.Date(RFSTDTC))
+        ),
+        "%Y-%m-%d"
+      ),
+      RFSTDTC = NULL,
+      RFENDTC = NULL
+    )
 
-  gen$DVSTDTC <- gen$TRTSDT + sample.int(7, nrow(gen), replace = TRUE)
+  gen$DVSEQ <- seq_len(n_records)
 
-  mock_categories <- c(
+  mock_terms <- c(
     "Developed withdrawal criteria but not withdrawn",
     "Entered but did not satisfy criteria",
     "Received a disallowed concomitant treatment",
@@ -43,21 +51,28 @@ gen_dv <- function(seed = 123) {
     "Other"
   )
 
-  gen$DVDECOD <- factor(
-    sample(mock_categories, nrow(gen), replace = TRUE),
-    levels = mock_categories
-  )
-
+  gen$DVTERM <- sample(mock_terms, n_records, replace = TRUE)
+  gen$DVDECOD <- gen$DVTERM
   gen$DVCAT <- factor("MAJOR")
 
   gen <- gen |>
-    select(!any_of(c("TRTSDT", "TRTSDTM", "TRTEDTM", "DVREAS", "DVEPRELI", "ASTDT", "ASTDY", "AEPRELFL")))
+    dplyr::select(STUDYID, USUBJID, DOMAIN, DVSEQ, DVTERM, DVDECOD, DVCAT, DVSTDTC) |>
+    dplyr::mutate(
+      DVTERM  = factor(DVTERM, levels = mock_terms),
+      DVDECOD = factor(DVDECOD, levels = mock_terms)
+    )
+
+  gen <- df_na(gen)
 
   additional_labels <- list(
-    DVCAT = "Protocol Deviation Category"
+    DOMAIN  = "Domain Abbreviation",
+    DVSEQ   = "Sequence Number",
+    DVTERM  = "Protocol Deviation Term",
+    DVDECOD = "Standardized Deviation Term",
+    DVCAT   = "Protocol Deviation Category",
+    DVSTDTC = "Start Date/Time of Protocol Deviation"
   )
 
-  # Restore labels
   gen <- restore_labels(
     df = gen,
     orig_df = raw,

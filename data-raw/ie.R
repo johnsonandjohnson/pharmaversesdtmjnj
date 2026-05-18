@@ -17,19 +17,24 @@ gen_ie <- function(seed = 123) {
   raw <- dplyr::select(pharmaversesdtm::dm, STUDYID, USUBJID) |>
     dplyr::distinct()
 
-  # Sample subjects to have IE deviations
-  cand_ids <- unique(raw$USUBJID)
   n_records <- 60
+
+  # Get SCREENING 1 visit info from sv
+  sv_screen <- pharmaversesdtm::sv |>
+    dplyr::filter(VISIT == "SCREENING 1") |>
+    dplyr::select(USUBJID, VISIT, VISITNUM, SVSTDTC)
 
   gen <- tibble(
     STUDYID = raw$STUDYID[1],
-    USUBJID = sample(cand_ids, n_records, replace = TRUE)
-  )
+    USUBJID = sample(sv_screen$USUBJID, n_records, replace = TRUE)
+  ) |>
+    dplyr::left_join(sv_screen, by = "USUBJID") |>
+    dplyr::mutate(
+      DOMAIN = "Inclusion/Exclusion",
+      IESEQ  = dplyr::row_number()
+    )
 
-  # Assign VISIT/VISITNUM
-  visit_names <- c("SCREENING")
-  gen$VISITNUM <- 1
-  gen$VISIT <- "SCREENING"
+  visit_names <- c("SCREENING 1")
 
   # Assign IECAT (INCLUSION/EXCLUSION)
   gen$IECAT <- sample(c("INCLUSION", "EXCLUSION"), n_records, replace = TRUE)
@@ -56,13 +61,9 @@ gen_ie <- function(seed = 123) {
 
 
   gen <- gen |>
-    dplyr::left_join(
-      pharmaversesdtm::dm[, c("USUBJID", "RFSTDTC")],
-      by = "USUBJID"
-    ) |>
     dplyr::mutate(
-      IEDTC = format(as.Date(RFSTDTC) - sample.int(14, dplyr::n(), replace = TRUE), "%Y-%m-%d"),
-      RFSTDTC = NULL
+      IEDTC = SVSTDTC,
+      SVSTDTC = NULL
     )
 
 
@@ -73,6 +74,8 @@ gen_ie <- function(seed = 123) {
 
   # Add labels
   additional_labels <- list(
+    DOMAIN = "Domain Abbreviation",
+    IESEQ = "Sequence Number",
     IECAT = "Inclusion/Exclusion Category",
     IETEST = "Inclusion/Exclusion Criterion Test Name",
     IETESTCD = "Inclusion/Exclusion Criterion Short Name",

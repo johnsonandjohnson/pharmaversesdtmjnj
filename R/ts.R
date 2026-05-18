@@ -18,3 +18,4 @@
 #' @examples
 #' head(data("ts"))
 "ts"
+

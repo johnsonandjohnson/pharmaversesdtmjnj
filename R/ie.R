@@ -3,12 +3,14 @@
 #' @description ie modified from pharmaversesdtm
 #' @source data from pharmaversesdtm.
 #'
-#' @format A data frame with 60 rows and 10 variables:
+#' @format A data frame with 60 rows and 12 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{USUBJID}{Unique Subject Identifier}
-#'  \item{VISITNUM}{Visit Number}
 #'  \item{VISIT}{Visit Name}
+#'  \item{VISITNUM}{Visit Number}
+#'  \item{DOMAIN}{Domain Abbreviation}
+#'  \item{IESEQ}{Sequence Number}
 #'  \item{IECAT}{Inclusion/Exclusion Category}
 #'  \item{IETEST}{Inclusion/Exclusion Criterion Test Name}
 #'  \item{IETESTCD}{Inclusion/Exclusion Criterion Short Name}
@@ -22,3 +24,4 @@
 #' @examples
 #' head(data("ie"))
 "ie"
+

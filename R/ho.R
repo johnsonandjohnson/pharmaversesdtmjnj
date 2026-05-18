@@ -2,9 +2,10 @@
 #'
 #' @description ho created from scratch
 #'
-#' @format A data frame with 1191 rows and 12 variables:
+#' @format A data frame with 1191 rows and 13 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
+#'  \item{DOMAIN}{Domain Abbreviation}
 #'  \item{USUBJID}{Unique Subject Identifier}
 #'  \item{HOSEQ}{Sequence Number}
 #'  \item{HOTERM}{Healthcare Encounter Term}
@@ -23,3 +24,4 @@
 #' @examples
 #' head(data("ho"))
 "ho"
+

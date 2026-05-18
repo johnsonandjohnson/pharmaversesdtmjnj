@@ -5,12 +5,14 @@
 \alias{ie}
 \title{ie}
 \format{
-A data frame with 60 rows and 10 variables:
+A data frame with 60 rows and 12 variables:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{USUBJID}{Unique Subject Identifier}
-\item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
+\item{VISITNUM}{Visit Number}
+\item{DOMAIN}{Domain Abbreviation}
+\item{IESEQ}{Sequence Number}
 \item{IECAT}{Inclusion/Exclusion Category}
 \item{IETEST}{Inclusion/Exclusion Criterion Test Name}
 \item{IETESTCD}{Inclusion/Exclusion Criterion Short Name}
@@ -29,7 +31,7 @@ ie
 ie modified from pharmaversesdtm
 }
 \examples{
-head(data("ie"))
+ head(data("ie"))
 }
 \seealso{
 \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}

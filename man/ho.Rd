@@ -5,9 +5,10 @@
 \alias{ho}
 \title{ho}
 \format{
-A data frame with 1191 rows and 12 variables:
+A data frame with 1191 rows and 13 variables:
 \describe{
 \item{STUDYID}{Study Identifier}
+\item{DOMAIN}{Domain Abbreviation}
 \item{USUBJID}{Unique Subject Identifier}
 \item{HOSEQ}{Sequence Number}
 \item{HOTERM}{Healthcare Encounter Term}
@@ -28,7 +29,7 @@ ho
 ho created from scratch
 }
 \examples{
-head(data("ho"))
+ head(data("ho"))
 }
 \seealso{
 \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}

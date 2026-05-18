@@ -42,6 +42,7 @@ gen_ho <- function() {
     dplyr::mutate(
       STUDYID,
       USUBJID,
+      DOMAIN = "HO",
       HOSEQ = AESEQ,
       HOTERM = dplyr::coalesce(AEDECOD, AETERM),
       HOSTDTC = dplyr::coalesce(AESTDTC, AEDTC),
@@ -61,6 +62,7 @@ gen_ho <- function() {
   labels <- c(
     STUDYID = "Study Identifier",
     USUBJID = "Unique Subject Identifier",
+    DOMAIN = "Domain Abbreviation",
     HOSEQ = "Sequence Number",
     HOTERM = "Healthcare Encounter Term",
     HOSTDTC = "Start Date/Time of Healthcare Encounter",
