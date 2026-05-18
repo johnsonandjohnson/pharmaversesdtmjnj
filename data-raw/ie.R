@@ -51,7 +51,7 @@ gen_ie <- function(seed = 123) {
   gen$IETESTCD <- ie_codes[match(gen$IETEST, ie_levels)]
 
   # Assign IEORRES/IESTRESC
-  gen$IEORRES <- rep("NOT MET", n_records)
+  gen$IEORRES <- ifelse(gen$IECAT == "INCLUSION", "N", "Y")
   gen$IESTRESC <- gen$IEORRES
 
 
