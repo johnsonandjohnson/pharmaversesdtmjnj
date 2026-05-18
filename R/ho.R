@@ -1,7 +1,6 @@
 #' @title ho
 #'
-#' @description ho modified from pharmaversesdtm
-#' @source data from pharmaversesdtm.
+#' @description ho created from scratch
 #'
 #' @format A data frame with 1191 rows and 12 variables:
 #' \describe{
@@ -22,5 +21,5 @@
 #' @keywords datasets ho
 #' @name ho
 #' @examples
-#' head(data("ho"))
+#'  head(data("ho"))
 "ho"

@@ -16,5 +16,5 @@
 #' @keywords datasets ts
 #' @name ts
 #' @examples
-#' head(data("ts"))
+#'  head(data("ts"))
 "ts"

@@ -18,5 +18,5 @@
 #' @keywords datasets dv
 #' @name dv
 #' @examples
-#' head(data("dv"))
+#'  head(data("dv"))
 "dv"

@@ -37,11 +37,11 @@ gen_ie <- function(seed = 123) {
   # Assign IETEST and IETESTCD based on IECAT
   inc_levels <- c("Disease criteria", "Medication criteria", "Laboratory criteria")
   exc_levels <- c("Medical history criteria", "Other")
-  inc_codes  <- c("INC01", "INC02", "INC03")
-  exc_codes  <- c("EXC01", "EXC02")
+  inc_codes <- c("INC01", "INC02", "INC03")
+  exc_codes <- c("EXC01", "EXC02")
 
   ie_levels <- c(inc_levels, exc_levels)
-  ie_codes  <- c(inc_codes,  exc_codes)
+  ie_codes <- c(inc_codes, exc_codes)
 
   gen$IETEST <- ifelse(
     gen$IECAT == "INCLUSION",
@@ -66,8 +66,8 @@ gen_ie <- function(seed = 123) {
     )
 
 
-  gen$IECAT    <- factor(gen$IECAT,    levels = c("EXCLUSION", "INCLUSION"))
-  gen$IETEST   <- factor(gen$IETEST,   levels = ie_levels)
+  gen$IECAT <- factor(gen$IECAT, levels = c("EXCLUSION", "INCLUSION"))
+  gen$IETEST <- factor(gen$IETEST, levels = ie_levels)
   gen$IETESTCD <- factor(gen$IETESTCD, levels = ie_codes)
   gen$VISIT <- factor(gen$VISIT, levels = visit_names)
 
