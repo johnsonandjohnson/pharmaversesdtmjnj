@@ -11,9 +11,9 @@ A data frame with 60 rows and 10 variables:
 \item{USUBJID}{Unique Subject Identifier}
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
-\item{IECAT}{IE Category}
-\item{IETEST}{IE Criterion Test Name}
-\item{IETESTCD}{IE Criterion Short Name}
+\item{IECAT}{Inclusion/Exclusion Category}
+\item{IETEST}{Inclusion/Exclusion Criterion Test Name}
+\item{IETESTCD}{Inclusion/Exclusion Criterion Short Name}
 \item{IEORRES}{Result or Finding in Original Units}
 \item{IESTRESC}{Character Result/Finding in Standard Format}
 \item{IEDTC}{Date/Time of Collection}

@@ -73,9 +73,9 @@ gen_ie <- function(seed = 123) {
 
   # Add labels
   additional_labels <- list(
-    IECAT = "IE Category",
-    IETEST = "IE Criterion Test Name",
-    IETESTCD = "IE Criterion Short Name",
+    IECAT = "Inclusion/Exclusion Category",
+    IETEST = "Inclusion/Exclusion Criterion Test Name",
+    IETESTCD = "Inclusion/Exclusion Criterion Short Name",
     IEORRES = "Result or Finding in Original Units",
     IESTRESC = "Character Result/Finding in Standard Format",
     VISIT = "Visit Name",
