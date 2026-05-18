@@ -48,4 +48,3 @@
 #' @examples
 #' head(data("ae"))
 "ae"
-

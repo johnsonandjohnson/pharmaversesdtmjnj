@@ -19,4 +19,3 @@
 #' @examples
 #' head(data("suppho"))
 "suppho"
-

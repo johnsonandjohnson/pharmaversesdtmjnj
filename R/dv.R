@@ -19,4 +19,3 @@
 #' @examples
 #' head(data("dv"))
 "dv"
-

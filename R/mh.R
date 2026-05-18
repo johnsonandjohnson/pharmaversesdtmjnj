@@ -43,4 +43,3 @@
 #' @examples
 #' head(data("mh"))
 "mh"
-
