@@ -1,6 +1,6 @@
 # ho
 
-ho modified from pharmaversesdtm
+ho created from scratch
 
 ## Usage
 
@@ -10,11 +10,15 @@ ho
 
 ## Format
 
-A data frame with 1191 rows and 12 variables:
+A data frame with 1191 rows and 13 variables:
 
 - STUDYID:
 
   Study Identifier
+
+- DOMAIN:
+
+  Domain Abbreviation
 
 - USUBJID:
 
@@ -60,17 +64,12 @@ A data frame with 1191 rows and 12 variables:
 
   Healthcare Encounter Occurrence
 
-## Source
-
-data from pharmaversesdtm.
-
 ## See also
 
 [`ae`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ae.md)
 [`ds`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ds.md)
 [`dv`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/dv.md)
 `ho`
-
 [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
 [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
 [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)

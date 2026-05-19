@@ -1,6 +1,6 @@
 # dv
 
-dv modified from pharmaversesdtm
+dv created from scratch
 
 ## Usage
 
@@ -10,7 +10,7 @@ dv
 
 ## Format
 
-A data frame with 75 rows and 17 variables:
+A data frame with 75 rows and 8 variables:
 
 - STUDYID:
 
@@ -19,14 +19,6 @@ A data frame with 75 rows and 17 variables:
 - USUBJID:
 
   Unique Subject Identifier
-
-- TRTSDTM:
-
-  Datetime of First Exposure to Treatment
-
-- TRTEDTM:
-
-  Datetime of Last Exposure to Treatment
 
 - DOMAIN:
 
@@ -42,47 +34,15 @@ A data frame with 75 rows and 17 variables:
 
 - DVDECOD:
 
-  DVDECOD
+  Standardized Deviation Term
 
 - DVCAT:
 
-  DVCAT
-
-- DVSCAT:
-
-  Subcategory for Protocol Deviation
-
-- DVREAS:
-
-  Reason for Deviation
-
-- DVEPRELI:
-
-  Epi/Pandemic Related Indicator
-
-- ASTDT:
-
-  Analysis Start Date
-
-- ASTDY:
-
-  Analysis Start Relative Day
-
-- AEPRELFL:
-
-  Analysis Epi/Pandemic Related Flag
-
-- TRTSDT:
-
-  Date of First Exposure to Treatment
+  Protocol Deviation Category
 
 - DVSTDTC:
 
-  Date of First Exposure to Treatment
-
-## Source
-
-data from pharmaversesdtm.
+  Start Date/Time of Protocol Deviation
 
 ## See also
 
@@ -90,7 +50,6 @@ data from pharmaversesdtm.
 [`ds`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ds.md)
 `dv`
 [`ho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ho.md)
-
 [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
 [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
 [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)

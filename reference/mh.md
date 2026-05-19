@@ -146,7 +146,6 @@ data from pharmaversesdtm.
 [`ds`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ds.md)
 [`dv`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/dv.md)
 [`ho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ho.md)
-
 [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
 `mh`
 [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)

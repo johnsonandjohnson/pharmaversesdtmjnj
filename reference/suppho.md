@@ -1,6 +1,6 @@
 # suppho
 
-suppho modified from pharmaversesdtm
+suppho created from scratch
 
 ## Usage
 
@@ -44,17 +44,12 @@ A data frame with 5955 rows and 8 variables:
 
   Qualifier Value
 
-## Source
-
-data from pharmaversesdtm.
-
 ## See also
 
 [`ae`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ae.md)
 [`ds`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ds.md)
 [`dv`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/dv.md)
 [`ho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ho.md)
-
 [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
 [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
 `suppho`

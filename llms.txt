@@ -42,8 +42,8 @@ Statistical Programming standards.
 
 - MH (Medical History)
 - DS (Disposition)
-- DV (Devitation)
-- IE (Inclusion/Exclusion)
+- DV (Protocol Deviations)
+- IE (Inclusion/Exclusion Criteria Not Met)
 
 ## Installation
 

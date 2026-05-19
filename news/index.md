@@ -7,10 +7,10 @@ CRAN release: 2026-05-07
 #### Added
 
 - Added SDTM datasets that comply with J&J standards:
-  - TS (Trial Design)
+  - TS (Trial Summary Information)
   - AE (Adverse Events)
   - HO (Healthcare Encounters)
-  - SUPPHO (supplemental qualifiers for Healthcare Encounters)
+  - SUPPHO (Supplemental Qualifiers for HO)
 - Added variables to MH:
   - MHSTDY
   - MHENDY
@@ -20,8 +20,8 @@ CRAN release: 2026-05-07
 #### Added
 
 - Added SDTM datasets that comply with J&J standards:
-  - DV (Deviation)
-  - IE (Inclusion/Exclusion)
+  - DV (Protocol Deviations)
+  - IE (Inclusion/Exclusion Criteria Not Met)
 
 #### Changed
 
