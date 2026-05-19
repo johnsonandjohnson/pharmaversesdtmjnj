@@ -2,6 +2,14 @@
 
 # Load required packages
 library(purrr)
+require(xportr)
+library(dplyr)
+
+# Source utility functions
+source(file.path("data-raw", "helpers.R"))
+
+# Datasets created from scratch
+dfs <- c("suppho", "dv", "ho")
 
 # Get all dataset scripts (exclude helpers.R and this file)
 data_scripts <- list.files(
@@ -14,6 +22,14 @@ data_scripts <- list.files(
 data_scripts <- data_scripts[
   !grepl("(helpers\\.R|create_data\\.R)", data_scripts)
 ]
+
+
+# Get all rda
+data_rda <- list.files(
+  path = "data",
+  pattern = "\\.rda$",
+  full.names = TRUE
+)
 
 # Run each script and handle saving and documentation
 run_script <- function(script_path) {
@@ -49,7 +65,7 @@ run_script <- function(script_path) {
         # Dataset is already in global environment from above
         tryCatch(
           {
-            roxygen2_data(dataset_name)
+            roxygen2_data(dataset_name, created_from_scratch = dfs)
             message(paste0("Successfully documented ", dataset_name))
             cat("---------------------------------\n")
           },
@@ -82,3 +98,37 @@ run_script <- function(script_path) {
 walk(data_scripts, run_script)
 
 message("All datasets have been created and documented.")
+
+
+# Run all xpt creation
+
+# Run each script and handle saving and documentation
+run_xpt <- function(script_path) {
+  env <- new.env()
+
+  script_name <- basename(script_path)
+  dataset_name <- tools::file_path_sans_ext(script_name)
+  message(paste0("Loading ", script_name, "..."))
+
+  load(script_path, envir = env)
+
+  raw <- get(dataset_name, envir = env)
+
+  df <- raw |>
+    mutate(across(where(is.factor), as.character))
+
+  df <- restore_labels(
+    df = df,
+    orig_df = raw
+  )
+
+  df |>
+    xportr_write(path = paste0("inst/extdata/", dataset_name, ".xpt"))
+}
+
+walk(data_rda, run_xpt)
+
+message("All datasets have been transformed.")
+
+styler::style_dir("data-raw")
+message("All datasets have been formated.")

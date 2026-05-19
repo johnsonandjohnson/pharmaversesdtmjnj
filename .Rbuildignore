@@ -11,3 +11,6 @@ LICENSE\.md$
 ^pkgdown$
 cran-comments\.md$
 data-raw$
+^.gitattributes$
+^.*\.xpt$
+^cran-comments\.md$

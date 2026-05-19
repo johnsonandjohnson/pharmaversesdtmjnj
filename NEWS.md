@@ -1,6 +1,27 @@
-# pharmaversesdtmjnj 0.0.1
+# pharmaversesdtmjnj 0.0.4
 
-## Initial Release
+### Added
+
+* Added SDTM datasets that comply with J&J standards:
+  * TS (Trial Summary Information)
+  * AE (Adverse Events)
+  * HO (Healthcare Encounters)
+  * SUPPHO (Supplemental Qualifiers for HO)
+
+* Added variables to MH:
+  * MHSTDY
+  * MHENDY
+
+## [0.0.2] - 2026-03-19
+
+### Added
+* Added SDTM datasets that comply with J&J standards:
+  * DV (Protocol Deviations)
+  * IE (Inclusion/Exclusion Criteria Not Met)
+
+### Changed
+
+## [0.0.1] - 2024-07-02
 
 * Added SDTM datasets that comply with J&J standards:
   * MH (Medical History)
