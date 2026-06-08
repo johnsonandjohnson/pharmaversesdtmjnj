@@ -1,4 +1,4 @@
-# pharmaversesdtmjnj 0.0.4
+# pharmaversesdtmjnj 0.0.6
 
 ### Added
 
