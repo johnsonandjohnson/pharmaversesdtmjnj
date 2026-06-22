@@ -24,10 +24,10 @@ suppho
 suppho created from scratch
 }
 \examples{
-head(data("suppho"))
+ head(data("suppho"))
 }
 \seealso{
-\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+\code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{ts}}
 }
 \keyword{datasets}
 \keyword{suppho}
