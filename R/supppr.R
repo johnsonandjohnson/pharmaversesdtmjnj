@@ -16,6 +16,5 @@
 #' @keywords datasets supppr
 #' @name supppr
 #' @examples
-#'  head(data("supppr"))
+#' head(data("supppr"))
 "supppr"
-
