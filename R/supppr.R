@@ -9,7 +9,7 @@
 #'  \item{USUBJID}{Unique Subject Identifier}
 #'  \item{IDVAR}{Identifying Variable}
 #'  \item{IDVARVAL}{Identifying Variable Value}
-#'  \item{PRELEC}{Was this procedure elective?}
+#'  \item{PRELEC}{Elective Procedure}
 #'  \item{PRFIND}{Diagnostic Procedure Findings}
 #' }
 #' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppr}} \code{\link{ts}}

@@ -45,7 +45,7 @@ gen_supppr <- function(seed = 457) {
     USUBJID  = "Unique Subject Identifier",
     IDVAR    = "Identifying Variable",
     IDVARVAL = "Identifying Variable Value",
-    PRELEC   = "Was this procedure elective?",
+    PRELEC   = "Elective Procedure",
     PRFIND   = "Diagnostic Procedure Findings"
   )
 
