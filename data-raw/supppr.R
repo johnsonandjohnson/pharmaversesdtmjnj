@@ -3,6 +3,7 @@
 #' This script generates the SUPPPR (Supplemental Procedures) dataset
 
 library(dplyr)
+library(tidyr)
 library(labelled)
 
 source("data-raw/helpers.R")
@@ -21,21 +22,30 @@ gen_supppr <- function(seed = 457) {
     NA_character_
   )
 
+  qnam_labels <- c(
+    PRPLN  = "Procedure Elective",
+    PRFIND = "Diagnostic Procedure Findings"
+  )
+
   gen <- pr |>
     dplyr::mutate(across(where(is.factor), as.character)) |>
     dplyr::select(STUDYID, USUBJID, PRSEQ) |>
     dplyr::mutate(
-      RDOMAIN = "PR",
-      IDVAR = "PRSEQ",
+      RDOMAIN  = "PR",
+      IDVAR    = "PRSEQ",
       IDVARVAL = as.character(PRSEQ),
-      PRELEC = sample(c("Y", "N"), dplyr::n(), replace = TRUE, prob = c(0.4, 0.6)),
-      PRFIND = sample(findings_pool, dplyr::n(), replace = TRUE)
+      PRPLN    = sample(c("Y", "N"), dplyr::n(), replace = TRUE, prob = c(0.4, 0.6)),
+      PRFIND   = sample(findings_pool, dplyr::n(), replace = TRUE)
     ) |>
-    dplyr::select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, PRELEC, PRFIND) |>
+    tidyr::pivot_longer(
+      cols      = c(PRPLN, PRFIND),
+      names_to  = "QNAM",
+      values_to = "QVAL"
+    ) |>
     dplyr::mutate(
-      PRELEC = factor(PRELEC),
-      PRFIND = factor(PRFIND)
-    )
+      QLABEL = qnam_labels[QNAM]
+    ) |>
+    dplyr::select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL)
 
   gen <- df_na(gen)
 
@@ -45,8 +55,9 @@ gen_supppr <- function(seed = 457) {
     USUBJID  = "Unique Subject Identifier",
     IDVAR    = "Identifying Variable",
     IDVARVAL = "Identifying Variable Value",
-    PRELEC   = "Elective Procedure",
-    PRFIND   = "Diagnostic Procedure Findings"
+    QNAM     = "Qualifier Variable Name",
+    QLABEL   = "Qualifier Variable Label",
+    QVAL     = "Qualifier Value"
   )
 
   gen <- restore_labels(
