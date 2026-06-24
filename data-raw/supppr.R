@@ -23,8 +23,9 @@ gen_supppr <- function(seed = 457) {
   )
 
   qnam_labels <- c(
-    PRPLN  = "Procedure Elective",
-    PRFIND = "Diagnostic Procedure Findings"
+    PRPLN    = "Procedure Elective",
+    PRFIND   = "Diagnostic Procedure Findings",
+    PRAEFIND = "Findings Adverse Event"
   )
 
   gen <- pr |>
@@ -35,10 +36,11 @@ gen_supppr <- function(seed = 457) {
       IDVAR    = "PRSEQ",
       IDVARVAL = as.character(PRSEQ),
       PRPLN    = sample(c("Y", "N"), dplyr::n(), replace = TRUE, prob = c(0.4, 0.6)),
-      PRFIND   = sample(findings_pool, dplyr::n(), replace = TRUE)
+      PRFIND   = sample(findings_pool, dplyr::n(), replace = TRUE),
+      PRAEFIND = sample(c("Y", "N"), dplyr::n(), replace = TRUE, prob = c(0.3, 0.7))
     ) |>
     tidyr::pivot_longer(
-      cols      = c(PRPLN, PRFIND),
+      cols      = c(PRPLN, PRFIND, PRAEFIND),
       names_to  = "QNAM",
       values_to = "QVAL"
     ) |>

@@ -2,7 +2,7 @@
 #'
 #' @description supppr created from scratch
 #'
-#' @format A data frame with 160 rows and 8 variables:
+#' @format A data frame with 240 rows and 8 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
 #'  \item{RDOMAIN}{Related Domain Abbreviation}
@@ -17,5 +17,6 @@
 #' @keywords datasets supppr
 #' @name supppr
 #' @examples
-#' head(data("supppr"))
+#'  head(data("supppr"))
 "supppr"
+
