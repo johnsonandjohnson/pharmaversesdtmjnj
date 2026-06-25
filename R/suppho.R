@@ -13,7 +13,7 @@
 #'  \item{QLABEL}{Qualifier Variable Label}
 #'  \item{QVAL}{Qualifier Value}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{ts}}
 #' @keywords datasets suppho
 #' @name suppho
 #' @examples

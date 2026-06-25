@@ -7,10 +7,14 @@
   * AE (Adverse Events)
   * HO (Healthcare Encounters)
   * SUPPHO (Supplemental Qualifiers for HO)
+  * SUPPPR (Supplemental Qualifiers for Procedures)
+  * PR (Procedures)
 
 * Added variables to MH:
   * MHSTDY
   * MHENDY
+
+* Added
 
 ## [0.0.2] - 2026-03-19
 
