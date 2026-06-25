@@ -39,7 +39,6 @@ gen_pr <- function(seed = 123) {
     dplyr::left_join(dm[, c("USUBJID", "RFSTDTC", "RFENDTC")], by = "USUBJID") |>
     dplyr::mutate(
       DOMAIN = "PR",
-      PRSEQ = seq_len(n_records),
       PRTRT = sample(prtrt_terms, n_records, replace = TRUE),
       PRDECOD = sample(prdecod_pool, n_records, replace = TRUE),
       PRINDC = sample(prindc_levels, n_records, replace = TRUE),
@@ -67,6 +66,9 @@ gen_pr <- function(seed = 123) {
       RFSTDTC = NULL,
       RFENDTC = NULL
     ) |>
+    dplyr::group_by(USUBJID) |>
+    dplyr::mutate(PRSEQ = dplyr::row_number()) |>
+    dplyr::ungroup() |>
     dplyr::select(
       STUDYID, DOMAIN, USUBJID, PRSEQ,
       PRTRT, PRDECOD, PRINDC, PREVINTX,

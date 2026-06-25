@@ -20,5 +20,6 @@
 #' @keywords datasets pr
 #' @name pr
 #' @examples
-#' head(data("pr"))
+#'  head(data("pr"))
 "pr"
+
