@@ -8,6 +8,7 @@
   * HO (Healthcare Encounters)
   * SUPPHO (Supplemental Qualifiers for HO)
   * SUPPPR (Supplemental Qualifiers for Procedures)
+    * SUPPPC (Supplemental Pharmacokinetic Concentrations)
   * PR (Procedures)
 
 * Added variables to MH:
