@@ -13,6 +13,7 @@
 * Added variables to MH:
   * MHSTDY
   * MHENDY
+  * Updated MH for MHCAT values
 
 * Added
 
