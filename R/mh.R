@@ -37,7 +37,7 @@
 #'  \item{MHSTDY}{Study Day of Start of Medical History}
 #'  \item{MHENDY}{Study Day of End of Medical History}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppr}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppc}} \code{\link{supppr}} \code{\link{ts}}
 #' @keywords datasets mh
 #' @name mh
 #' @examples

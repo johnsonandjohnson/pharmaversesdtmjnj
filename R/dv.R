@@ -13,9 +13,10 @@
 #'  \item{DVCAT}{Protocol Deviation Category}
 #'  \item{DVSTDTC}{Start Date/Time of Protocol Deviation}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppc}} \code{\link{supppr}} \code{\link{ts}}
 #' @keywords datasets dv
 #' @name dv
 #' @examples
-#' head(data("dv"))
+#'  head(data("dv"))
 "dv"
+

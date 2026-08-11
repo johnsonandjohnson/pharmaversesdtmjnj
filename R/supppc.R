@@ -1,11 +1,12 @@
-#' @title suppho
+#' @title supppc
 #'
-#' @description suppho created from scratch
+#' @description supppc modified from pharmaversesdtm
+#' @source data from pharmaversesdtm.
 #'
-#' @format A data frame with 5955 rows and 8 variables:
+#' @format A data frame with 4572 rows and 8 variables:
 #' \describe{
 #'  \item{STUDYID}{Study Identifier}
-#'  \item{RDOMAIN}{Related Domain}
+#'  \item{RDOMAIN}{Related Domain Abbreviation}
 #'  \item{USUBJID}{Unique Subject Identifier}
 #'  \item{IDVAR}{Identifying Variable}
 #'  \item{IDVARVAL}{Identifying Variable Value}
@@ -14,9 +15,9 @@
 #'  \item{QVAL}{Qualifier Value}
 #' }
 #' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppc}} \code{\link{supppr}} \code{\link{ts}}
-#' @keywords datasets suppho
-#' @name suppho
+#' @keywords datasets supppc
+#' @name supppc
 #' @examples
-#'  head(data("suppho"))
-"suppho"
+#'  head(data("supppc"))
+"supppc"
 
