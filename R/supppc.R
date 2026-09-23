@@ -18,6 +18,5 @@
 #' @keywords datasets supppc
 #' @name supppc
 #' @examples
-#'  head(data("supppc"))
+#' head(data("supppc"))
 "supppc"
-
