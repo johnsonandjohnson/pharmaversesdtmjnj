@@ -9,7 +9,7 @@ library(dplyr)
 source(file.path("data-raw", "helpers.R"))
 
 # Datasets created from scratch
-dfs <- c("suppho", "dv", "ho")
+dfs <- c("suppho", "dv", "ho", "pr", "supppr")
 
 # Get all dataset scripts (exclude helpers.R and this file)
 data_scripts <- list.files(
@@ -23,13 +23,6 @@ data_scripts <- data_scripts[
   !grepl("(helpers\\.R|create_data\\.R)", data_scripts)
 ]
 
-
-# Get all rda
-data_rda <- list.files(
-  path = "data",
-  pattern = "\\.rda$",
-  full.names = TRUE
-)
 
 # Run each script and handle saving and documentation
 run_script <- function(script_path) {
@@ -101,6 +94,13 @@ message("All datasets have been created and documented.")
 
 
 # Run all xpt creation
+
+# Get all rda
+data_rda <- list.files(
+  path = "data",
+  pattern = "\\.rda$",
+  full.names = TRUE
+)
 
 # Run each script and handle saving and documentation
 run_xpt <- function(script_path) {

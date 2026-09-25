@@ -42,10 +42,20 @@ gen_mh <- function() {
       RFSTDTC = NULL
     )
 
+  gen <- gen |>
+    dplyr::mutate(
+      MHCAT = sample(
+        c("PRIMARY DIAGNOSIS", "SIGNIFICANT PRE-EXISTING CONDITION", "HISTORICAL DIAGNOSIS", "GENERAL MEDICAL HISTORY", "MEDICAL HISTORY OF INTEREST"),
+        size = dplyr::n(),
+        replace = TRUE
+      )
+    )
+
   gen <- df_na(gen)
 
   # Add labels
   additional_labels <- list(
+    MHCAT = "Category for Medical History",
     MHTOXGR = "Standard Toxicity Grade",
     MHSTDY = "Study Day of Start of Medical History",
     MHENDY = "Study Day of End of Medical History"

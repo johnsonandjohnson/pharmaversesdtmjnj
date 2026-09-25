@@ -1,6 +1,6 @@
 Package: pharmaversesdtmjnj
 Title: J&J Innovative Medicine SDTM Test Data
-Version: 0.0.4
+Version: 0.0.6
 Authors@R: 
     c(
     person(given = "David", 
@@ -31,5 +31,4 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 LazyData: true
 Language: en-US
-Config/roxygen2/version: 8.0.0
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.1.0

@@ -1,4 +1,4 @@
-# pharmaversesdtmjnj 0.0.4
+# pharmaversesdtmjnj 0.0.6
 
 ### Added
 
@@ -7,10 +7,15 @@
   * AE (Adverse Events)
   * HO (Healthcare Encounters)
   * SUPPHO (Supplemental Qualifiers for HO)
+  * SUPPPR (Supplemental Qualifiers for Procedures)
+  * SUPPPC (Supplemental Pharmacokinetic Concentrations)
+  * PR (Procedures)
 
 * Added variables to MH:
   * MHSTDY
   * MHENDY
+  * Updated MH for MHCAT values
+
 
 ## [0.0.2] - 2026-03-19
 
