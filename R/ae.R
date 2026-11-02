@@ -42,7 +42,7 @@
 #'  \item{AEENDY}{Study Day of End of Adverse Event}
 #'  \item{AEENRTPT}{End Relative to Reference Time Point}
 #' }
-#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{suppho}} \code{\link{ts}}
+#' @seealso \code{\link{ae}} \code{\link{ds}} \code{\link{dv}} \code{\link{ho}} \code{\link{ie}} \code{\link{mh}} \code{\link{pr}} \code{\link{suppho}} \code{\link{supppc}} \code{\link{supppr}} \code{\link{ts}}
 #' @keywords datasets ae
 #' @name ae
 #' @examples
