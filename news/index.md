@@ -1,8 +1,8 @@
 # Changelog
 
-## pharmaversesdtmjnj 0.0.4
+## pharmaversesdtmjnj 0.0.6
 
-CRAN release: 2026-05-07
+CRAN release: 2026-09-23
 
 #### Added
 
@@ -11,9 +11,13 @@ CRAN release: 2026-05-07
   - AE (Adverse Events)
   - HO (Healthcare Encounters)
   - SUPPHO (Supplemental Qualifiers for HO)
+  - SUPPPR (Supplemental Qualifiers for Procedures)
+  - SUPPPC (Supplemental Pharmacokinetic Concentrations)
+  - PR (Procedures)
 - Added variables to MH:
   - MHSTDY
   - MHENDY
+  - Updated MH for MHCAT values
 
 ### \[0.0.2\] - 2026-03-19
 

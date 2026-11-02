@@ -72,7 +72,10 @@ A data frame with 1191 rows and 13 variables:
 `ho`
 [`ie`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ie.md)
 [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
+[`pr`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/pr.md)
 [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)
+[`supppc`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/supppc.md)
+[`supppr`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/supppr.md)
 [`ts`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ts.md)
 
 ## Examples

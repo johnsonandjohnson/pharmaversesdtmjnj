@@ -20,11 +20,11 @@ Page](https://johnsonandjohnson.github.io/junco/).
 ## Citation
 
 Munoz Tord D, Masel N, Kovach J (2026). *pharmaversesdtmjnj: J&J
-Innovative Medicine SDTM Test Data*. R package version 0.0.4.
+Innovative Medicine SDTM Test Data*. R package version 0.0.6.
 
     @Manual{,
       title = {pharmaversesdtmjnj: J&J Innovative Medicine SDTM Test Data},
       author = {David {Munoz Tord} and Nicholas Masel and Joe Kovach},
       year = {2026},
-      note = {R package version 0.0.4},
+      note = {R package version 0.0.6},
     }

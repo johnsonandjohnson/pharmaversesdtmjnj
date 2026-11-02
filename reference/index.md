@@ -14,7 +14,13 @@
   : ie
 - [`mh`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/mh.md)
   : mh
+- [`pr`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/pr.md)
+  : pr
 - [`suppho`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/suppho.md)
   : suppho
+- [`supppc`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/supppc.md)
+  : supppc
+- [`supppr`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/supppr.md)
+  : supppr
 - [`ts`](https://johnsonandjohnson.github.io/pharmaversesdtmjnj/reference/ts.md)
   : ts
