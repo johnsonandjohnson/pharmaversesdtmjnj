@@ -33,12 +33,14 @@ gen_mh <- function() {
       by = "USUBJID"
     ) |>
     dplyr::mutate(
-      MHSTDY = as.integer(difftime(
-        dplyr::if_else(grepl("^\\d{4}-\\d{2}-\\d{2}$", MHSTDTC), MHSTDTC, NA),
-        RFSTDTC,
-        units = "days"
-      )),
-      MHENDY = as.integer(substr(MHENDTC, 1, 4)),
+      MHSTDY = derive_study_day(
+        MHSTDTC,
+        RFSTDTC
+      ),
+      MHENDY = derive_study_day(
+        MHENDTC,
+        RFSTDTC
+      ),
       RFSTDTC = NULL
     )
 

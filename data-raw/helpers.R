@@ -289,3 +289,78 @@ roxygen2_data <- function(df_name, created_from_scratch = NULL) {
 
   writeLines(description, file.path("R", paste0(df_name, ".R")))
 }
+
+
+#' Helper functions for data generation
+#'
+#' This file contains utility functions used by the data generation scripts.
+#'
+#' @title Derive Study Day
+#' @description
+#' Derives a CDISC-compliant Study Day variable relative to a reference start date.
+#'
+#' According to SDTMIG guidance, Study Day variables (--STDY and --ENDY)
+#' are calculated relative to the date portion of RFSTDTC:
+#'
+#' * If the event date is before RFSTDTC:
+#'     Study Day = event date - RFSTDTC
+#'
+#' * If the event date is on or after RFSTDTC:
+#'     Study Day = (event date - RFSTDTC) + 1
+#'
+#' This ensures there is no Study Day 0.
+#'
+#' Missing event dates or reference dates return NA.
+#'
+#' @param date A vector of event dates as Date objects.
+#' @param ref_date A vector of reference start dates (RFSTDTC) as Date objects.
+#'
+#' @returns An integer vector containing CDISC-compliant Study Day values.
+#'
+#' @examples
+#' derive_study_day(
+#'   as.Date("2025-05-10"),
+#'   as.Date("2025-05-10")
+#' )
+#' # returns 1
+#'
+#' derive_study_day(
+#'   as.Date("2025-05-11"),
+#'   as.Date("2025-05-10")
+#' )
+#' # returns 2
+#'
+#' derive_study_day(
+#'   as.Date("2025-05-05"),
+#'   as.Date("2025-05-10")
+#' )
+#' # returns -5
+#'
+#' @noRd
+derive_study_day <- function(date, ref_date) {
+  
+  date <- as.character(date)
+  ref_date <- as.character(ref_date)
+  
+  date <- dplyr::if_else(
+    grepl("^\\d{4}-\\d{2}-\\d{2}$", date),
+    date,
+    NA_character_
+  )
+  
+  ref_date <- dplyr::if_else(
+    grepl("^\\d{4}-\\d{2}-\\d{2}$", ref_date),
+    ref_date,
+    NA_character_
+  )
+  
+  date <- as.Date(date)
+  ref_date <- as.Date(ref_date)
+  
+  dplyr::if_else(
+    !is.na(date) & !is.na(ref_date),
+    as.integer(date - ref_date) +
+      dplyr::if_else(date >= ref_date, 1L, 0L),
+    NA_integer_
+  )
+}
