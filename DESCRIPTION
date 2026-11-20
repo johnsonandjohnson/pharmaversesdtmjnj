@@ -3,20 +3,24 @@ Title: J&J Innovative Medicine SDTM Test Data
 Version: 0.0.6
 Authors@R: 
     c(
-    person(given = "David", 
-            family = "Munoz Tord",
-            role = c("aut", "cre"),
-            email = "david.munoztord@mailbox.org"),
+    person(given = "Yogesh",
+           family = "Runthla",
+           role = c("aut", "cre"),
+           email = "yrunthla@gmail.com"),
+    person(given = "David",
+           family = "Munoz Tord",
+           role = "aut",
+           email = "david.munoztord@mailbox.org"),
     person(given = "Nicholas",
            family = "Masel",
            role = c("aut"),
            email = "nmasel@its.jnj.com"),
-      person(given = "Joe",
+    person(given = "Joe",
            family = "Kovach",
            role = "aut",
            email = "jkovach2@its.jnj.com"),
-     person("Renfei", "Mao", , "rmao6@its.jnj.com", role = c("ctb")),
-     person(given = "J&J Innovative Medicine",
+    person("Renfei", "Mao", , "rmao6@its.jnj.com", role = c("ctb")),
+    person(given = "J&J Innovative Medicine",
            role = c("cph", "fnd"))
     )
 Description: A set of Study Data Tabulation Model (SDTM) datasets constructed by 
