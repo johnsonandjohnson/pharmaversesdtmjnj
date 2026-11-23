@@ -1,5 +1,8 @@
 # pharmaversesdtmjnj 0.0.6
 
+### Changed
+- Changed package maintainer to Yogesh Runthla
+
 ### Added
 
 * Added SDTM datasets that comply with J&J standards:
