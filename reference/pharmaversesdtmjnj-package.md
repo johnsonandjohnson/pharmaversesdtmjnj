@@ -7,9 +7,11 @@ Programming.
 
 ## Author
 
-**Maintainer**: David Munoz Tord <david.munoztord@mailbox.org>
+**Maintainer**: Yogesh Runthla <yrunthla@gmail.com>
 
 Authors:
+
+- Yogesh Runthla <yrunthla@gmail.com>
 
 - David Munoz Tord <david.munoztord@mailbox.org>
 

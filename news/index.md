@@ -4,6 +4,10 @@
 
 CRAN release: 2026-09-23
 
+#### Changed
+
+- Changed package maintainer to Yogesh Runthla
+
 #### Added
 
 - Added SDTM datasets that comply with J&J standards:
