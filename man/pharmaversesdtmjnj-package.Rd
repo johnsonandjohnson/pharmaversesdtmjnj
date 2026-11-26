@@ -9,10 +9,11 @@
 A set of Study Data Tabulation Model (SDTM) datasets constructed by modifying the 'pharmaversesdtm' package to meet J&J Innovative Medicine's standard data structure for Clinical and Statistical Programming.
 }
 \author{
-\strong{Maintainer}: David Munoz Tord \email{david.munoztord@mailbox.org}
+\strong{Maintainer}: Yogesh Runthla \email{yrunthla@gmail.com}
 
 Authors:
 \itemize{
+  \item Yogesh Runthla \email{yrunthla@gmail.com}
   \item David Munoz Tord \email{david.munoztord@mailbox.org}
   \item Nicholas Masel \email{nmasel@its.jnj.com}
   \item Joe Kovach \email{jkovach2@its.jnj.com}
